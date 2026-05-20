@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# EK MMD 4. Sem Eksamen - Argilla
+- Group name: 404 Not Found
 
-## Getting Started
+- Group members names:
+  - Bjørn Sanboli
+  - Jonathan Skadhauge-Jensen
 
-First, run the development server:
+### Running dev server
+
+In order to run the development server, do:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+Then:
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Development Guidelines
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Language throughout project:**
 
-## Learn More
+- English
 
-To learn more about Next.js, take a look at the following resources:
+### Branching Strategy:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Branches:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Branches will aim to stay focused on their intended scope and avoid unrelated changes.
 
-## Deploy on Vercel
+- In cases where merge conflicts cannot be resolved individually, they will be reviewed as a team.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Naming Conventions:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Category | Convention | Example |
+| -------- | ---------- | ------- |
+| App folders (`app/*` or `app/src/(pages)/page`) | lowercase | `app/hooks` |
+| Component folders | kebab-case | `/components/hero-banner` |
+| Component files | PascalCase | `HeroBanner.jsx` |
+| Component functions | PascalCase | `HeroBanner()` |
+| Helper functions | camelCase | `formatDate()` |
+| Hooks | `use` + camelCase | `useAuth()` |
+| Props / variables | camelCase | `productName` |
+| Constants | UPPER_SNAKE_CASE | `API_URL`, `ENV_KEY` |
+
+
+## Commit + Branch Naming
+
+Will aim to be kept as brief as possible, first part of each will include:
+
+- add - `text`
+- remove - `text`
+- change - `text`
+- fix - `text`
+
+### Commmit Messages
+
+> **Example:** _<br>"change - `Footer.jsx` location"<br>"add - Footer, HeaderNav, globals styling"_
+
+### Branch Naming
+
+**Convention:** snake-case
+
+> **Example:** _<br>"add-`layout-elem`"<br>"add-`globals-styling`"_
+
+## Folder Structure:
+
+**Layout Example:**
+```bash
+├── app
+│   ├── components
+│      ├── hero-banner
+│      │   └── HeroBanner.jsx
+│      │
+│      ├── layouts
+│      │   ├── HeaderNav.jsx
+│      │   └── Footer.jsx
+│      │
+│      ├── ui
+│      │   ├── btns
+│      │   │   ├── ActionBtn.jsx
+│      │   │   └── LinkBtn.jsx
+│      │   ├── filter
+│      │       └── FilterElem.jsx
+│      │ 
+```
