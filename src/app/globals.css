@@ -1,26 +1,133 @@
 @import "tailwindcss";
 
+/* Fonts */
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/OpenSans-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Butler";
+  src: url("/fonts/Butler-Free-Lgt.woff2") format("woff2");
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Butler";
+  src: url("/fonts/Butler-Free-Rmn.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Butler";
+  src: url("/fonts/Butler-Free-Med.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Butler";
+  src: url("/fonts/Butler-Free-SBd.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Butler";
+  src: url("/fonts/Butler-Free-Bd.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Butler";
+  src: url("/fonts/Butler-Free-XBd.woff2") format("woff2");
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Butler";
+  src: url("/fonts/Butler-Free-Blk.woff2") format("woff2");
+  font-weight: 900;
+  font-display: swap;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+  /* Sizing */
+  --max-w-desktop: 1440px;
+  --max-w-breakout: 1920px;
+  --max-w-text: 75ch;
+
+  --grid-col: 1fr minmax(0, var(--max-w-desktop)) 1fr;
+
+  /* Fonts */
+  --font-sans-serif: "Open Sans", sans-serif;
+  --font-display: "Butler", serif;
+
+  /* Colors */
+  --primary-col: #803125;
+  --secondary-col: #FFE5CF;
+  --dark-col: #240700;
+  --light-col: #F2F2F2;
+
+  /* Text Colors */
+  --text-dark: var(--dark-col);
+  --text-light: var(--light-col);
+
+}
+
+/* custom TW grid-cols-var */
+@utility grid-cols-max {
+  grid-template-columns: var(--grid-col);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  
+  /* Sizing */
+  --spacing-text-max: var(--max-w-text);
+  --spacing-content-max: var(--max-w-breakout);
+
+  /* Fonts */
+  --font-sans: var(--font-sans-serif);
+  --font-serif: var(--font-display);
+
+  /* Colors */
+  --color-primary: var(--primary-col);
+  --color-secondary: var(--secondary-col);
+  --color-dark: var(--dark-col);
+  --color-light: var(--light-col);
+
+  /* Text Colors */
+  --color-text-dark: var(--text-dark);
+  --color-text-light: var(--text-light);
+
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+@layer base {
+  
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--text-light);
+  color: var(--text-dark);
+  font-family: var(--font-sans-serif);
 }
+
+/* 
+- Grid and grid-cols: Centers elements, and ensures nothing goes beyond 1440 px max w, expect for when breakout is wanted.
+- min-h-svh: <main> is never smaller than the smallest visible viewport (fx. prevents hidden content by mobile adress bar)
+- min-h-dvh: Always fills the exact visible height, expanding if the address bar (or other UI) disappears.
+- *:col-start-2: Align all direct descendants (child elements) of <main> on middle column.
+*/
+
+main {
+  @apply grid grid-cols-max min-h-svh md:min-h-dvh gap-y-28 *:col-start-2 *:col-end-auto *:last:mb-28;
+}
+
+}
+
