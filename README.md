@@ -53,7 +53,7 @@ Will aim to be kept as brief as possible, first part of each will include:
 - change - `text`
 - fix - `text`
 
-### Commmit Messages
+### Commit Messages
 
 > **Example:** _<br>"change - `Footer.jsx` location"<br>"add - Footer, HeaderNav, globals styling"_
 
