@@ -64,6 +64,7 @@
   --max-w-desktop: 1440px;
   --max-w-breakout: 1920px;
   --max-w-text: 75ch;
+  --mobile-pad-inline: 1.25rem;
 
   --grid-col: 1fr minmax(0, var(--max-w-desktop)) 1fr;
 
@@ -93,6 +94,7 @@
   /* Sizing */
   --spacing-text-max: var(--max-w-text);
   --spacing-content-max: var(--max-w-breakout);
+  --spacing-mobile-inline: var(--mobile-pad-inline);
 
   /* Fonts */
   --font-sans: var(--font-sans-serif);
