@@ -26,7 +26,7 @@ function Content({ title, body }) {
 // ─── Spine segment ───────────────────────────────────────────────────────────
 
 function SpineLine() {
-  return <div className="bg-dark min-h-8 w-1.5 flex-1" />;
+  return <div className="bg-dark min-h-8 w-3 flex-1" />;
 }
 
 // ─── Component ──────────────────────────────────────────────────────────────
@@ -37,7 +37,7 @@ export default function AlternatingTimeline({ items, className = "" }) {
       className={`mx-auto flex w-full max-w-360 flex-col items-stretch px-8 ${className}`}
     >
       {/* Top cap */}
-      <div className="bg-dark mx-6 h-6 w-1.5 rounded-t sm:mx-auto" />
+      <div className="bg-dark mx-6 h-6 w-3 rounded-t sm:mx-auto" />
 
       {items.map((item, index) => {
         const isLeft = index % 2 === 0;
@@ -57,7 +57,7 @@ export default function AlternatingTimeline({ items, className = "" }) {
             </div>
 
             {/* ── Spine + node ── */}
-            <div className="flex w-1.5 flex-col items-center">
+            <div className="flex w-3 flex-col items-center">
               <SpineLine />
               <div className="bg-secondary relative z-10 -my-0.5 h-9 w-9 shrink-0 rounded-full" />
               <SpineLine />
@@ -80,7 +80,7 @@ export default function AlternatingTimeline({ items, className = "" }) {
       })}
 
       {/* Bottom cap */}
-      <div className="bg-dark mx-6 h-6 w-1.5 rounded-b sm:mx-auto" />
+      <div className="bg-dark mx-6 h-6 w-3 rounded-b sm:mx-auto" />
     </div>
   );
 }

@@ -2,7 +2,7 @@
 
 const Factbanner = () => {
   return (
-    <div className="bg-secondary flex w-full items-center justify-center py-8">
+    <div className="bg-secondary flex w-full items-center justify-center py-16">
       <div
         className={`flex max-w-421 flex-col gap-16 px-4 md:flex-row md:gap-8`}
       >

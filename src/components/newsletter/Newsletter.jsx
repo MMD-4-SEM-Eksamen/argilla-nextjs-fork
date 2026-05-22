@@ -68,15 +68,18 @@ export default function Newsletter() {
     "w-full rounded-xl bg-secondary px-4 py-3 text-primary font-sans placeholder:text-primary/70 outline-none ring-1 ring-transparent transition focus:ring-primary";
 
   return (
-    <section className="bg-light w-full max-w-80 p-4 md:p-6">
+    <section className="w-full max-w-80 p-4 md:p-6">
       <form onSubmit={handleSubmit} noValidate className="space-y-5">
         <div className="text-center">
-          <h2 className="text-dark text-2xl font-semibold">Nyhedsbrev</h2>
+          <h2 className="text-secondary text-2xl font-semibold">Nyhedsbrev</h2>
         </div>
 
         <div>
-          <label htmlFor="email" className="text-dark mb-2 block text-base">
-            <span className="text-primary">*</span> Email
+          <label
+            htmlFor="email"
+            className="text-secondary mb-2 block text-base"
+          >
+            <span className="text-red-600">*</span> Email
           </label>
           <input
             id="email"

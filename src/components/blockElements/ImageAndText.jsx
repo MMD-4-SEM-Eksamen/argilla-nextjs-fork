@@ -50,6 +50,7 @@ export default function ImageAndText({
   title,
   description,
   reverseOrder = false,
+  variant = "primary",
   showButton = false,
   buttonLabel = "Learn more",
   buttonHref = "#",
@@ -66,12 +67,14 @@ export default function ImageAndText({
 
   return (
     <section
-      className={`bg-light flex flex-col gap-8 rounded-4xl px-4 py-4 sm:gap-6 sm:px-6 sm:py-6 lg:grid lg:grid-cols-2 lg:items-center lg:gap-12 lg:px-2 lg:py-0 ${layoutOrder} ${className}`}
+      className={`mx-auto flex max-w-360 flex-col gap-8 rounded-4xl px-4 py-4 sm:gap-6 sm:px-6 sm:py-6 lg:grid lg:grid-cols-2 lg:items-center lg:gap-12 lg:px-2 lg:py-0 ${layoutOrder} ${className}`}
     >
       <div
         className={`${reverseOrder ? "lg:order-2 lg:col-start-2" : "lg:order-1"}`}
       >
-        <div className="border-primary/95 bg-secondary relative aspect-4/3 w-full overflow-hidden rounded-3xl border-b-4 border-l-4 shadow-[0_10px_30px_rgba(128,49,37,0.14)]">
+        <div
+          className={`${variant === "primary" ? "border-primary/95" : "border-secondary/95"} bg-primary relative aspect-4/3 w-full overflow-hidden rounded-3xl border-b-6 ${reverseOrder ? "border-r-6" : "border-l-6"} shadow-[0_10px_30px_rgba(128,49,37,0.14)]`}
+        >
           <Image
             src={imageSrc}
             alt={imageAlt || title || "Image"}
@@ -123,10 +126,14 @@ export default function ImageAndText({
         )}
 
         <div className="space-y-4">
-          <h2 className="text-primary font-serif text-4xl leading-none font-medium sm:text-5xl">
+          <h2
+            className={`text-${variant === "primary" ? "primary" : "secondary"} font-serif text-4xl leading-none font-medium sm:text-5xl`}
+          >
             {title}
           </h2>
-          <p className="text-dark/80 max-w-prose text-sm leading-6 sm:text-[0.95rem]">
+          <p
+            className={`text-${variant === "primary" ? "dark" : "light"} max-w-prose text-sm leading-6 sm:text-base`}
+          >
             {description}
           </p>
         </div>
