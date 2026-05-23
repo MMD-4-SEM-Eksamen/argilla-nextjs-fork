@@ -67,6 +67,8 @@
 
   --grid-col: 1fr minmax(0, var(--max-w-desktop)) 1fr;
 
+  --grid-col-break: 1fr minmax(0, var(--max-w-breakout)) 1fr;
+
   /* Fonts */
   --font-sans-serif: "Open Sans", sans-serif;
   --font-display: "Butler", serif;
@@ -85,6 +87,10 @@
 /* Custom TW grid-cols-var */
 @utility grid-cols-max {
   grid-template-columns: var(--grid-col);
+}
+
+@utility grid-cols-breakout {
+  grid-template-columns: var(--grid-col-break);
 }
 
 @theme inline {
@@ -165,12 +171,14 @@
 
   /* 
 - Grid and grid-cols: Centers elements, and ensures nothing goes beyond 1440 px max w, expect for when breakout is wanted.
+- *:col-start-2: Align all direct descendants (child elements) of <main> on middle column.
+
+(Moved to body in layout.js - update me)
 - min-h-svh: <main> is never smaller than the smallest visible viewport (fx. prevents hidden content by mobile adress bar)
 - min-h-dvh: Always fills the exact visible height, expanding if the address bar (or other UI) disappears.
-- *:col-start-2: Align all direct descendants (child elements) of <main> on middle column.
 */
 
   main {
-    @apply grid-cols-max max-w-content-max grid min-h-svh gap-y-28 *:col-start-2 *:col-end-auto *:last:mb-28 md:min-h-dvh;
+    @apply grid-cols-max auto-rows-min max-w-content-max grid min-h-full gap-y-28 *:col-start-2 *:col-end-auto *:last:mb-28 md:min-h-dvh;
   }
 }

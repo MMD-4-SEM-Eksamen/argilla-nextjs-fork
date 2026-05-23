@@ -1,6 +1,7 @@
 /* Use case: 
 // children - Put an SVG or a text element in it.
 // (themeVariant) - Determines theme palette: themeVariant = "primary" / "secondary"
+// (elemStyle) - Used to add aditonal styling to the parent container: elemStyle = "px-1"
 // (initSize) - Determines elements initial sizing: initSize = "medium" / "large"
 // (bpSize) - Determines breakpoint sizing: bpSize = "medium" / "large"
 */
@@ -8,6 +9,7 @@
 export default function IconWrapper({
   children,
   themeVariant = "primary",
+  elemStyle = "",
   initSize = "base",
   bpSize = "",
 }) {
@@ -33,7 +35,7 @@ export default function IconWrapper({
   const spanText = `[&>:not(svg)]:overflow-hidden`
 
   return (
-    <div className={`place-items-center grid w-fit aspect-square *:aspect-square rounded-full ${spanText} ${themeSwatch[themeVariant]} ${size[initSize]} ${responsiveSize[bpSize]}`}>
+    <div className={`place-items-center grid w-fit aspect-square *:aspect-square rounded-full ${elemStyle} ${spanText} ${themeSwatch[themeVariant]} ${size[initSize]} ${responsiveSize[bpSize]}`}>
       {children}
     </div>
   )

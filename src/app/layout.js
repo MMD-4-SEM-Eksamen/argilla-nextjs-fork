@@ -8,10 +8,11 @@ export const metadata = {
   description: "Førende IT-virksomhed indenfor SaaS",
 };
 
+// Added parent grid to body to center everything. Makes 4K screens less awkward now.
 export default function RootLayout({ children }) {
   return (
     <html lang="da">
-      <body className="antialiased grid justify-center">
+      <body className="antialiased min-h-svh md:min-h-dvh grid grid-cols-breakout *:col-start-2 *:col-end-auto">
         <Providers>
           <HeaderNav />
           {children}

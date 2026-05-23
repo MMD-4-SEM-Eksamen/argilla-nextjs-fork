@@ -2,10 +2,12 @@ import LineBlock from "@/components/blockElements/LineBlock";
 import RevolvingBanner from "@/components/revolvingBanner/RevolvingBanner";
 import ImageAndText from "@/components/blockElements/ImageAndText";
 import Factbanner from "@/components/factbanner/Factbanner";
+import TagElem from "@/components/ui/tag/TagElem";
 
 export default function Home() {
   return (
     <main>
+      <TagElem label={"test"}/>
       <LineBlock
         items={[
           {
