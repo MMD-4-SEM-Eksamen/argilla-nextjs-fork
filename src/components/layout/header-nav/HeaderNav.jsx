@@ -112,7 +112,7 @@ export default function HeaderNav({ themeVariant = "primary" }) {
                   btnLink="/"
                   themeVariant={themeVariant}
                   btnClass="mx-auto"
-                  btnSize="medium"
+                  initSize="medium"
                 >
                   Bestil
                 </LinkBtn>

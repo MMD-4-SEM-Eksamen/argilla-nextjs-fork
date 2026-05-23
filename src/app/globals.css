@@ -59,7 +59,6 @@
 }
 
 :root {
-
   /* Sizing */
   --max-w-desktop: 1440px;
   --max-w-breakout: 1920px;
@@ -74,23 +73,21 @@
 
   /* Colors */
   --primary-col: #803125;
-  --secondary-col: #FFE5CF;
+  --secondary-col: #ffe5cf;
   --dark-col: #240700;
-  --light-col: #F2F2F2;
+  --light-col: #f2f2f2;
 
   /* Text Colors */
   --text-dark: var(--dark-col);
   --text-light: var(--light-col);
-
 }
 
-/* custom TW grid-cols-var */
+/* Custom TW grid-cols-var */
 @utility grid-cols-max {
   grid-template-columns: var(--grid-col);
 }
 
 @theme inline {
-  
   /* Sizing */
   --spacing-text-max: var(--max-w-text);
   --spacing-content-max: var(--max-w-breakout);
@@ -109,27 +106,71 @@
   /* Text Colors */
   --color-text-dark: var(--text-dark);
   --color-text-light: var(--text-light);
+}
 
+/* Adding font styletile to TW text-* utility classes.
+  - Layering then under @layer base, so @layer utility will still take precadence in case of overriding use cases.
+  - Will be easier to configure the font presets this way, with a more unified control & approach.
+  - Shouldn't be necessary to add "font-sans" to the sans ones, since that is added to the body parent,
+  - and via TW, font families are inherited from parent, but, for the sake of redundancy, it is added anyways.
+  */
+@layer base {
+  .text-9xl {
+    @apply font-serif font-medium;
+  }
+  .text-8xl {
+    @apply font-serif font-medium;
+  }
+  .text-7xl {
+    @apply font-serif font-medium;
+  }
+  .text-6xl {
+    @apply font-serif font-medium;
+  }
+  .text-5xl {
+    @apply font-serif font-medium;
+  }
+  .text-4xl {
+    @apply font-sans font-normal;
+  }
+  .text-3xl {
+    @apply font-sans font-normal;
+  }
+  .text-2xl {
+    @apply font-sans font-semibold;
+  }
+  .text-xl {
+    @apply font-sans font-semibold;
+  }
+  .text-lg {
+    @apply font-sans font-semibold;
+  }
+   .text-base {
+    @apply font-sans font-normal;
+  }
+   .text-sm {
+    @apply font-sans font-normal;
+  }
+   .text-xs {
+    @apply font-sans font-normal;
+  }
 }
 
 @layer base {
-  
-body {
-  background: var(--text-light);
-  color: var(--text-dark);
-  font-family: var(--font-sans-serif);
-}
+  body {
+    background: var(--text-light);
+    color: var(--text-dark);
+    font-family: var(--font-sans-serif);
+  }
 
-/* 
+  /* 
 - Grid and grid-cols: Centers elements, and ensures nothing goes beyond 1440 px max w, expect for when breakout is wanted.
 - min-h-svh: <main> is never smaller than the smallest visible viewport (fx. prevents hidden content by mobile adress bar)
 - min-h-dvh: Always fills the exact visible height, expanding if the address bar (or other UI) disappears.
 - *:col-start-2: Align all direct descendants (child elements) of <main> on middle column.
 */
 
-main {
-  @apply grid grid-cols-max min-h-svh md:min-h-dvh gap-y-28 *:col-start-2 *:col-end-auto *:last:mb-28;
+  main {
+    @apply grid-cols-max max-w-content-max grid min-h-svh gap-y-28 *:col-start-2 *:col-end-auto *:last:mb-28 md:min-h-dvh;
+  }
 }
-
-}
-

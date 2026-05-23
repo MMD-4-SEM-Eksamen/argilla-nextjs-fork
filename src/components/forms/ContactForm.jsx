@@ -328,8 +328,7 @@ export default function ContactForm() {
       <ActionBtn
         type="submit"
         themeVariant="secondary"
-        btnSize="medium"
-        mdSize="medium"
+        initSize="medium"
         btnClass="mt-4"
       >
         Send Besked

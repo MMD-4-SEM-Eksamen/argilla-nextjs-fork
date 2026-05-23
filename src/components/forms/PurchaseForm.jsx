@@ -276,8 +276,8 @@ export default function PurchaseForm() {
       <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <ActionBtn
           themeVariant="primary"
-          btnSize="medium"
-          mdSize="medium"
+          initSize="base"
+          bpSize="toMedium"
           btnClass="w-full sm:w-fit"
           handleBtnAction={clearForm}
         >
@@ -287,8 +287,8 @@ export default function PurchaseForm() {
         <ActionBtn
           type="submit"
           themeVariant="secondary"
-          btnSize="medium"
-          mdSize="medium"
+          initSize="base"
+          bpSize="toMedium"
           btnClass="w-full sm:w-fit"
         >
           Send Forespørgsel

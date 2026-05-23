@@ -5,7 +5,7 @@ import Factbanner from "@/components/factbanner/Factbanner";
 
 export default function Home() {
   return (
-    <div className="font-sans">
+    <main>
       <LineBlock
         items={[
           {
@@ -30,8 +30,10 @@ export default function Home() {
           },
         ]}
       />
-      <RevolvingBanner />
-      <div className="bg-dark flex flex-col gap-12 py-12">
+      <div className="col-span-full">
+        <RevolvingBanner />
+      </div>
+      <div className="bg-dark flex flex-col gap-12 py-12 col-span-full">
         <ImageAndText
           imageSrc="/images/software2.webp"
           imageAlt="Abstrakt teknologi visualisering"
@@ -48,7 +50,9 @@ export default function Home() {
           variant="secondary"
         />
       </div>
-      <Factbanner />
+      <div className="col-span-full">
+        <Factbanner />
+      </div>
       <ImageAndText
         imageSrc="/images/software3.webp"
         imageAlt="Abstrakt teknologi visualisering"
@@ -60,6 +64,6 @@ export default function Home() {
         buttonHref="#"
         buttonVariant="secondary"
       />
-    </div>
+    </main>
   );
 }

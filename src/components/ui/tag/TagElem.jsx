@@ -15,18 +15,18 @@ export default function TagElem({
 }) {
   const filterUrl = `${baseUrl}?${filterKey}=${encodeURIComponent(children)}`;
 
-  const tagStyles = {
+  const themeSwatch = {
     primary: "bg-secondary text-primary",
     secondary: "bg-primary text-secondary",
   };
 
-  const tagTheme = tagStyles[themeVariant] || tagStyles.primary;
+  const theme = themeSwatch[themeVariant] || themeSwatch.primary;
   const spanText = `block overflow-hidden text-ellipsis text-nowrap w-full text-center`;
 
   return (
     <Link href={filterUrl}>
       <button
-        className={`${tagTheme} inline-flex place-items-center md:cursor-pointer hover:border-b-dark h-fit w-fit rounded-lg px-2 py-1 font-sans text-sm font-bold transition-colors duration-150 ease-in-out hover:border-b-3`}
+        className={`${theme} inline-flex place-items-center md:cursor-pointer hover:border-b-dark h-fit w-fit rounded-lg px-2 py-1 font-sans text-sm font-bold transition-colors duration-150 ease-in-out hover:border-b-3`}
         {...props}
       >
         <span className={spanText}>{children}</span>

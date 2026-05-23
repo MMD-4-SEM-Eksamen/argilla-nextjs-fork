@@ -11,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="da">
-      <body className="antialiased">
+      <body className="antialiased grid justify-center">
         <Providers>
           <HeaderNav />
           {children}

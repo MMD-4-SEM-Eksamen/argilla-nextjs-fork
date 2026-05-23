@@ -127,7 +127,7 @@ export default function Newsletter() {
         )}
 
         <div className="flex justify-center">
-          <ActionBtn type="submit" btnSize="medium">
+          <ActionBtn type="submit" initSize="medium">
             Lorem
           </ActionBtn>
         </div>
