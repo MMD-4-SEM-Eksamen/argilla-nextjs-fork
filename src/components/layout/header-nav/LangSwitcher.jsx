@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useRouter, useSearchParams } from "react";
 import { useLanguage } from "@/context/lang-context/useLanguage";
 import {
   CaretDownIcon,
@@ -9,6 +9,9 @@ import {
 export default function LangSwitcher ({ themeVariant = "primary" }) {
   const { language, setLanguage } = useLanguage();
   const [isLangOpen, setIsLangOpen] = useState(false);
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  
 
   // Should correspond to actual html lang="" attr
   // Link: https://www.w3schools.com/tags/ref_language_codes.asp
@@ -34,6 +37,20 @@ export default function LangSwitcher ({ themeVariant = "primary" }) {
   };
 
   const theme = themeSwatch[themeVariant] || themeSwatch.primary;
+
+  const handleLanguageChange = (lang) => {
+    setLanguage(lang);
+    
+    // Only add language param if it's not the default
+    if (lang !== "da") {
+      const params = new URLSearchParams(searchParams);
+      params.set("language", lang);
+      router.push(`?${params.toString()}`);
+    } else {
+      // Remove language param if switching back to default
+      router.push(window.location.pathname);
+    }
+  };
 
   // If any clicks are happening outside the dropdown container, will close it.
   // Similar to how dropdown behaves in FilterElem.jsx
@@ -76,7 +93,7 @@ export default function LangSwitcher ({ themeVariant = "primary" }) {
             <li
               key={lang}
               onClick={() => {
-                setLanguage(lang);
+                handleLanguageChange(lang);
               }}
               className={`block w-full px-3 py-2 text-center uppercase text-lg md:cursor-pointer md:text-xl ${theme.textAlt}`}
             >
