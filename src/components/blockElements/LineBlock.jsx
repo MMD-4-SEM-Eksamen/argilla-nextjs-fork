@@ -37,7 +37,7 @@ export default function AlternatingTimeline({ items, className = "" }) {
       className={`mx-auto flex w-full max-w-360 flex-col items-stretch px-8 ${className}`}
     >
       {/* Top cap */}
-      <div className="bg-dark mx-6 h-6 w-3 rounded-t sm:mx-auto" />
+      <div className="bg-dark mx-0 h-6 w-3 rounded-t sm:mx-auto" />
 
       {items.map((item, index) => {
         const isLeft = index % 2 === 0;
@@ -48,7 +48,7 @@ export default function AlternatingTimeline({ items, className = "" }) {
             className="grid grid-cols-[auto_auto_1fr] sm:grid-cols-[1fr_auto_1fr]"
           >
             {/* ── Left content slot ── */}
-            <div className="flex items-center justify-end py-8 pr-6">
+            <div className="flex items-center justify-end py-8 pr-0 sm:pr-6">
               {isLeft && (
                 <div className="hidden sm:block">
                   <Content title={item.title} body={item.body} />
@@ -80,7 +80,7 @@ export default function AlternatingTimeline({ items, className = "" }) {
       })}
 
       {/* Bottom cap */}
-      <div className="bg-dark mx-6 h-6 w-3 rounded-b sm:mx-auto" />
+      <div className="bg-dark mx-0 h-6 w-3 rounded-b sm:mx-auto" />
     </div>
   );
 }
