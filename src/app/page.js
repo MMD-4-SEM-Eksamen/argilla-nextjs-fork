@@ -3,10 +3,37 @@ import RevolvingBanner from "@/components/revolvingBanner/RevolvingBanner";
 import ImageAndText from "@/components/blockElements/ImageAndText";
 import Factbanner from "@/components/factbanner/Factbanner";
 import TagElem from "@/components/ui/tag/TagElem";
+import Certificates from "@/components/certificates/Certificates";
+import HeroBanner from "@/components/hero-banners/HeroBanner";
+import SectionElem from "@/components/section-elem/SectionElem";
+import ImageCard from "@/components/cards/ImageCard";
+import ImageWrapper from "@/components/ui/image-wrapper/ImageWrapper";
+import Image from "next/image";
+import IconCard from "@/components/cards/IconCard";
+import { GlobeIcon } from "@phosphor-icons/react/dist/ssr";
 
 export default function Home() {
   return (
     <main>
+      <HeroBanner
+        themeVariant="secondary"
+        centeredVariant={false}
+        heroSubHeading="Er jeres systemer bygget til den forretning I driver i dag?"
+        heroHeading="Tag kontrol over dine forretningssystemer"
+        heroBodyText="Med Argilla får I et enterprise-system I selv kan konfigurere og udvikle videre. On-prem, i skyen eller som managed løsning."
+        backgroundImageConfig={{ imgSrc: "" }}
+        foregroundImageConfig={{
+          imgSrc: "/images/software4.webp",
+          imgWidth: 600,
+          imgHeight: 600,
+          strokeStyle: "bottom",
+          roundingVariant: "medium",
+        }}
+        buttonLabel="Kom i gang"
+        buttonLink="/"
+        buttonConfig={{ initSize: "medium", bpSize: "toLarge" }}
+      />
+
       <LineBlock
         items={[
           {
@@ -31,10 +58,93 @@ export default function Home() {
           },
         ]}
       />
+      <SectionElem
+        themeVariant="primary"
+        centeredVariant={false}
+        breakout={false}
+        sectionHeading="Vores Cases"
+        sectionBodyText="Vi har hjulpet virksomheder på tværs af brancher med at tage kontrol over deres forretningssystemer. Her er et udvalg af de løsninger vi har bygget sammen med vores kunder."
+        btnChild={{
+          type: "LinkBtn",
+          label: "Se alle cases",
+          props: {
+            initSize: "medium",
+            link: "/",
+            themeVariant: "secondary",
+          },
+        }}
+      >
+        <div className="grid grid-cols-3 gap-40">
+          <ImageCard
+            cardTitle="Digitalisering af lagerstyring i produktionsvirksomhed"
+            cardText="En mellemstor produktionsvirksomhed erstattede manuelle Excel-ark med et skræddersyet lagerstyringsmodul bygget i Argilla konfigureret og vedligeholdt af deres eget team."
+            imgSrc="/images/blocks.webp"
+            btnChild={{
+              type: "LinkBtn",
+              label: "Læs mere",
+              props: {
+                initSize: "medium",
+                link: "/",
+              },
+            }}
+          />
+          <ImageCard
+            cardTitle="Unified kundeportal for nordisk forsikringsselskab"
+            cardText="Argilla dannede fundamentet for en samlet kundeportal der integrerede data fra tre separate systemer og gav sagsbehandlere ét overblik."
+            imgSrc="/images/laptopondesk.webp"
+            btnChild={{
+              type: "LinkBtn",
+              label: "Læs mere",
+              props: {
+                initSize: "medium",
+                link: "/",
+              },
+            }}
+          />
+          <ImageCard
+            cardTitle="Compliance-workflow til reguleret lægemiddelindustri"
+            cardText="Med Argilla kunne virksomheden selv opdatere godkendelsesprocesser og dokumentationskrav i takt med lovgivningsændringer uden at involvere eksterne udviklere."
+            imgSrc="/images/laptop.webp"
+            btnChild={{
+              type: "LinkBtn",
+              label: "Læs mere",
+              props: {
+                initSize: "medium",
+                link: "/",
+              },
+            }}
+          />
+        </div>
+      </SectionElem>
       <div className="col-span-full">
         <RevolvingBanner />
       </div>
-      <div className="bg-dark flex flex-col gap-12 py-12 col-span-full">
+
+      <Image
+        src="/images/team.webp"
+        alt="Billede af et team i samarbejde"
+        width={1200}
+        height={800}
+        className="h-200 w-full object-cover"
+      />
+      <SectionElem
+        themeVariant="primary"
+        centeredVariant={true}
+        breakout={false}
+        sectionHeading="Teamet bag Argilla"
+        sectionBodyText="Bag Argilla sidder et dedikeret team med dyb erfaring i forretningssystemer og softwareudvikling. Vi tror på at de bedste løsninger opstår i tæt samarbejde med vores kunder, og at teknologi skal tjene forretningen, ikke omvendt."
+        btnChild={{
+          type: "LinkBtn",
+          label: "Mød teamet",
+          props: {
+            initSize: "medium",
+            link: "/",
+            themeVariant: "secondary",
+          },
+        }}
+      />
+
+      <div className="bg-dark col-span-full flex flex-col gap-12 py-24">
         <ImageAndText
           imageSrc="/images/software2.webp"
           imageAlt="Abstrakt teknologi visualisering"
@@ -53,6 +163,51 @@ export default function Home() {
       </div>
       <div className="col-span-full">
         <Factbanner />
+      </div>
+
+      <SectionElem
+        themeVariant="primary"
+        centeredVariant={false}
+        breakout={false}
+        sectionHeading="Hvad vores kunder siger"
+        sectionBodyText="Vi måles på den forskel vi gør i hverdagen. Her er hvad nogle af vores kunder har at sige om samarbejdet med Argilla."
+        btnChild={{
+          type: "LinkBtn",
+          label: "Se alle cases",
+          props: {
+            initSize: "medium",
+            link: "/",
+            themeVariant: "secondary",
+          },
+        }}
+      >
+        <div className="grid grid-cols-3 gap-40">
+          <IconCard
+            themeVariant="primary"
+            initSize="fit"
+            iconChild={<GlobeIcon />}
+            cardTitle="Vi kan nu selv tilpasse vores processer uden at vente på en udvikler. Det har ændret måden vi arbejder på"
+            cardCitation="- IT-chef, produktionsvirksomhed"
+          />
+          <IconCard
+            themeVariant="primary"
+            initSize="fit"
+            iconChild={<GlobeIcon />}
+            cardTitle="Implementeringen gik hurtigere end forventet, og teamet fra Argilla var med os hele vejen."
+            cardCitation="- Operations Manager, logistikvirksomhed"
+          />
+          <IconCard
+            themeVariant="primary"
+            initSize="fit"
+            iconChild={<GlobeIcon />}
+            cardTitle="Endelig et system der passer til vores forretning, ikke omvendt."
+            cardCitation="- Administrerende direktør, servicevirksomhed"
+          />
+        </div>
+      </SectionElem>
+
+      <div className="col-span-full">
+        <Certificates />
       </div>
       <ImageAndText
         imageSrc="/images/software3.webp"
