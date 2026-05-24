@@ -7,7 +7,6 @@ import TagElem from "@/components/ui/tag/TagElem";
 export default function Home() {
   return (
     <main>
-      <TagElem label={"test"}/>
       <LineBlock
         items={[
           {
