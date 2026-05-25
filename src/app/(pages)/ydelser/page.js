@@ -34,7 +34,7 @@ export default function Ydelser() {
             type: "LinkBtn",
             label: "Kom i gang",
             props: {
-              btnLink: "/",
+              btnLink: "/koeb?type=self-hosted",
               initSize: "medium",
             },
           }}
@@ -57,7 +57,7 @@ export default function Ydelser() {
             type: "LinkBtn",
             label: "Kom i gang",
             props: {
-              btnLink: "/",
+              btnLink: "/koeb?type=cloud-saas",
               initSize: "medium",
             },
           }}
@@ -80,7 +80,7 @@ export default function Ydelser() {
             type: "LinkBtn",
             label: "Kom i gang",
             props: {
-              btnLink: "/",
+              btnLink: "/koeb?type=application-management",
               initSize: "medium",
             },
           }}
