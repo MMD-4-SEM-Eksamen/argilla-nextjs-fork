@@ -114,7 +114,7 @@ export default function ContactForm() {
     <form
       onSubmit={handleSubmit}
       noValidate
-      className="bg-light w-full max-w-230 p-3 md:p-4"
+      className="mx-auto w-full max-w-360 p-3 md:p-4"
     >
       <div className="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-2">
         <div>
