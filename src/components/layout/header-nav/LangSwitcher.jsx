@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useLanguage } from "@/context/lang-context/useLanguage";
 import {
@@ -7,7 +7,7 @@ import {
   PlanetIcon
 } from "@phosphor-icons/react";
 
-export default function LangSwitcher ({ themeVariant = "primary" }) {
+function LangSwitcherContent ({ themeVariant = "primary" }) {
   const { language, setLanguage } = useLanguage();
   const [isLangOpen, setIsLangOpen] = useState(false);
   const router = useRouter();
@@ -105,5 +105,13 @@ export default function LangSwitcher ({ themeVariant = "primary" }) {
       )}
     </div>
   );
-};
+}
+
+export default function LangSwitcher(props) {
+  return (
+    <Suspense>
+      <LangSwitcherContent {...props} />
+    </Suspense>
+  );
+}
 
