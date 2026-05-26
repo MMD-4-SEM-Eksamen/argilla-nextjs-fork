@@ -161,6 +161,90 @@
    .text-xs {
     @apply font-sans font-normal;
   }
+
+  @media (min-width: 768px) {
+    .md\:text-9xl {
+      @apply font-serif font-medium;
+    }
+    .md\:text-8xl {
+      @apply font-serif font-medium;
+    }
+    .md\:text-7xl {
+      @apply font-serif font-medium;
+    }
+    .md\:text-6xl {
+      @apply font-serif font-medium;
+    }
+    .md\:text-5xl {
+      @apply font-serif font-medium;
+    }
+    .md\:text-4xl {
+      @apply font-sans font-normal;
+    }
+    .md\:text-3xl {
+      @apply font-sans font-normal;
+    }
+    .md\:text-2xl {
+      @apply font-sans font-semibold;
+    }
+    .md\:text-xl {
+      @apply font-sans font-semibold;
+    }
+    .md\:text-lg {
+      @apply font-sans font-semibold;
+    }
+    .md\:text-base {
+      @apply font-sans font-normal;
+    }
+    .md\:text-sm {
+      @apply font-sans font-normal;
+    }
+    .md\:text-xs {
+      @apply font-sans font-normal;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .lg\:text-9xl {
+      @apply font-serif font-medium;
+    }
+    .lg\:text-8xl {
+      @apply font-serif font-medium;
+    }
+    .lg\:text-7xl {
+      @apply font-serif font-medium;
+    }
+    .lg\:text-6xl {
+      @apply font-serif font-medium;
+    }
+    .lg\:text-5xl {
+      @apply font-serif font-medium;
+    }
+    .lg\:text-4xl {
+      @apply font-sans font-normal;
+    }
+    .lg\:text-3xl {
+      @apply font-sans font-normal;
+    }
+    .lg\:text-2xl {
+      @apply font-sans font-semibold;
+    }
+    .lg\:text-xl {
+      @apply font-sans font-semibold;
+    }
+    .lg\:text-lg {
+      @apply font-sans font-semibold;
+    }
+    .lg\:text-base {
+      @apply font-sans font-normal;
+    }
+    .lg\:text-sm {
+      @apply font-sans font-normal;
+    }
+    .lg\:text-xs {
+      @apply font-sans font-normal;
+    }
+  }
 }
 
 @layer base {

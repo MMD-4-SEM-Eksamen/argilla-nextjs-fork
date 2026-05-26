@@ -57,6 +57,9 @@ export default function FooterElem({ themeVariant = "primary" }) {
               <h2 className={`${theme.textAlt}`}>Links</h2>
               <ul>
                 <li className={`${theme.textHover}`}>
+                  <Link href="/">Hjem</Link>
+                </li>
+                <li className={`${theme.textHover}`}>
                   <Link href="/ydelser">Ydelser</Link>
                 </li>
                 <li className={`${theme.textHover}`}>

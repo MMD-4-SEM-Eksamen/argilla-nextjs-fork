@@ -46,6 +46,9 @@ export default function HeaderNav({ themeVariant = "primary" }) {
             className={`col-start-2 flex gap-8 px-4 max-lg:hidden [&>li>a]:cursor-pointer [&>li>a]:font-sans [&>li>a]:text-lg`}
           >
             <li className={`${theme.text}`}>
+              <Link href="/">Hjem</Link>
+            </li>
+            <li className={`${theme.text}`}>
               <Link href="/ydelser">Ydelser</Link>
             </li>
             <li className={`${theme.text}`}>
@@ -94,6 +97,9 @@ export default function HeaderNav({ themeVariant = "primary" }) {
             <ul
               className={`grid w-full place-content-center gap-6 text-center [&>li>a]:text-lg`}
             >
+            <li className={`${theme.text}`}>
+              <Link href="/">Hjem</Link>
+            </li>
               <li className={`${theme.text}`}>
                 <Link href="/ydelser">Ydelser</Link>
               </li>
