@@ -146,24 +146,24 @@ export default function Home() {
         }}
       />
 
-      <div className="bg-dark col-span-full flex flex-col gap-12 py-24">
-        <ImageAndText
-          imageSrc="/images/software2.webp"
-          imageAlt="Abstrakt teknologi visualisering"
-          title="Bygget til den komplekse virkelighed"
-          description="Forretningssystemer er sjældent simple. Processer går på tværs af afdelinger, regler ændrer sig, og behov udvikler sig over tid. Argilla er designet til netop den virkelighed. En platform der er robust nok til enterprise-kompleksitet, men fleksibel nok til at I selv kan forme den, uden at tilkalde en udvikler hver gang noget skal justeres."
-          variant="secondary"
-        />
-        <ImageAndText
-          imageSrc="/images/software.webp"
-          imageAlt="Abstrakt teknologi visualisering"
-          title="Tilpas platformen til jeres infrastruktur"
-          description="Ingen virksomheder er ens, og det skal jeres system heller ikke være. Med Argilla vælger I selv hvordan løsningen deployes: direkte på jeres egne servere, i skyen, eller som en managed løsning vi drifter og vedligeholder for jer. Samme platform, samme fleksibilitet uanset hvor I er, og hvordan I arbejder."
-          reverseOrder
-          variant="secondary"
-        />
-      </div>
       <div className="col-span-full">
+        <div className="bg-dark flex flex-col gap-12 py-24 md:gap-y-40">
+          <ImageAndText
+            imageSrc="/images/software2.webp"
+            imageAlt="Abstrakt teknologi visualisering"
+            title="Bygget til den komplekse virkelighed"
+            description="Forretningssystemer er sjældent simple. Processer går på tværs af afdelinger, regler ændrer sig, og behov udvikler sig over tid. Argilla er designet til netop den virkelighed. En platform der er robust nok til enterprise-kompleksitet, men fleksibel nok til at I selv kan forme den, uden at tilkalde en udvikler hver gang noget skal justeres."
+            variant="secondary"
+          />
+          <ImageAndText
+            imageSrc="/images/software.webp"
+            imageAlt="Abstrakt teknologi visualisering"
+            title="Tilpas platformen til jeres infrastruktur"
+            description="Ingen virksomheder er ens, og det skal jeres system heller ikke være. Med Argilla vælger I selv hvordan løsningen deployes: direkte på jeres egne servere, i skyen, eller som en managed løsning vi drifter og vedligeholder for jer. Samme platform, samme fleksibilitet uanset hvor I er, og hvordan I arbejder."
+            reverseOrder
+            variant="secondary"
+          />
+        </div>
         <Factbanner />
       </div>
 
