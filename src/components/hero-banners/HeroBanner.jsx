@@ -82,10 +82,22 @@ export default function HeroBanner({
       heading: "text-secondary",
       bodyText: "text-light",
     },
+    tertiary: {
+      opagueOverlay: "bg-dark",
+      subHeading: "text-light",
+      heading: "text-secondary",
+      bodyText: "text-light",
+    },
+    quaternary: {
+      opagueOverlay: "bg-secondary",
+      subHeading: "text-dark",
+      heading: "text-primary",
+      bodyText: "text-dark",
+    },
   };
 
   const theme = themeSwatch[themeVariant] || themeSwatch.primary;
-  
+
   const defaultBackgroundConfig = {
     imgWidth: 1920,
     imgHeight: 1080,
@@ -93,14 +105,18 @@ export default function HeroBanner({
   };
 
   return (
-    <div className={`${breakout ? "col-span-full" : ""} ${elemStyle} grid *:[grid-area:1/1]`}>
-      <ImageWrapper {...defaultBackgroundConfig} />
+    <div
+      className={`${breakout ? "col-span-full" : ""} ${elemStyle} grid *:[grid-area:1/1]`}
+    >
+      {themeVariant === "primary" || themeVariant === "secondary" ? (
+        <ImageWrapper {...defaultBackgroundConfig} />
+      ) : null}
       {centeredVariant ? (
         <div
-          className={`${theme.opagueOverlay} w-full grid gap-20 place-content-center place-items-center px-mobile-inline py-10 md:px-20 md:py-20`}
+          className={`${theme.opagueOverlay} ${themeVariant === "tertiary" || themeVariant === "quaternary" ? "min-h-screen" : ""} px-mobile-inline grid w-full place-content-center place-items-center gap-20 py-10 md:px-20 md:py-20`}
         >
-          <div className="grid gap-12 max-w-[75ch] text-center">
-            <h1 className={`${theme.heading} text-4xl md:text-6xl`}>
+          <div className="grid max-w-[75ch] gap-12 text-center">
+            <h1 className={`${theme.heading} font-serif text-4xl md:text-6xl`}>
               {heroHeading}
             </h1>
             <p className={`${theme.bodyText} text-base md:text-3xl`}>
@@ -108,19 +124,27 @@ export default function HeroBanner({
             </p>
           </div>
           {buttonLabel && (
-            <LinkBtn btnLink={buttonLink} themeVariant={themeVariant} {...buttonConfig}>
+            <LinkBtn
+              btnLink={buttonLink}
+              themeVariant={themeVariant}
+              {...buttonConfig}
+            >
               {buttonLabel}
             </LinkBtn>
           )}
         </div>
       ) : (
         <div
-          className={`${theme.opagueOverlay} w-full gap-4 flex items-center justify-between px-mobile-inline py-10 md:px-20 md:py-20`}
+          className={`${theme.opagueOverlay} px-mobile-inline flex ${themeVariant === "tertiary" || themeVariant === "quaternary" ? "min-h-screen" : ""} w-full items-center justify-between gap-4 py-10 md:px-20 md:py-20`}
         >
-          <div className="grid gap-20 max-w-[75ch]">
+          <div className="grid max-w-[75ch] gap-20">
             <div className="grid gap-5">
-              <span className={`${theme.subHeading} text-xl md:text-3xl`}>{heroSubHeading}</span>
-              <h1 className={`${theme.heading} text-4xl md:text-6xl`}>
+              <span className={`${theme.subHeading} text-xl md:text-3xl`}>
+                {heroSubHeading}
+              </span>
+              <h1
+                className={`${theme.heading} font-serif text-4xl md:text-6xl`}
+              >
                 {heroHeading}
               </h1>
               <p className={`${theme.bodyText} mt-3 text-base md:text-3xl`}>
@@ -128,13 +152,21 @@ export default function HeroBanner({
               </p>
             </div>
             {buttonLabel && (
-              <LinkBtn btnLink={buttonLink} themeVariant={themeVariant} {...buttonConfig}>
+              <LinkBtn
+                btnLink={buttonLink}
+                themeVariant={themeVariant}
+                {...buttonConfig}
+              >
                 {buttonLabel}
               </LinkBtn>
             )}
           </div>
-          <div className="max-xl:hidden aspect-square max-w-150 max-h-150">
-            <ImageWrapper themeVariant={themeVariant} strokeStyle="bottomRight" {...foregroundImageConfig} />
+          <div className="aspect-square max-h-150 max-w-150 max-xl:hidden">
+            <ImageWrapper
+              themeVariant={themeVariant}
+              strokeStyle="bottomRight"
+              {...foregroundImageConfig}
+            />
           </div>
         </div>
       )}

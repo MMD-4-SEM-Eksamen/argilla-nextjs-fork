@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <main>
       <HeroBanner
-        themeVariant="secondary"
+        themeVariant="tertiary"
         centeredVariant={false}
         heroSubHeading="Er jeres systemer bygget til den forretning I driver i dag?"
         heroHeading="Tag kontrol over dine forretningssystemer"

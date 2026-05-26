@@ -7,7 +7,7 @@ export default function Kontakt() {
   return (
     <main>
       <HeroBanner
-        themeVariant="primary"
+        themeVariant="quaternary"
         centeredVariant={false}
         heroSubHeading="Kontakt os"
         heroHeading="Vi hjælper dig videre"
