@@ -34,7 +34,7 @@ export default function HeaderNav({ themeVariant = "primary" }) {
   return (
     <header>
       <div
-        className={`px-mobile-inline lg:grid-cols-max ${theme.bg} max-w-content-max relative py-3 lg:grid lg:px-11 lg:*:col-start-2`}
+        className={`px-mobile-inline lg:grid-cols-max ${theme.bg} max-w-breakout relative py-3 lg:grid lg:px-11 lg:*:col-start-2`}
       >
         <nav className="flex w-full justify-between lg:grid lg:grid-cols-[1fr_auto_1fr] lg:items-center lg:justify-normal">
           <LogoFull

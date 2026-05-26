@@ -103,7 +103,7 @@ export default function PurchaseForm() {
     <form
       onSubmit={handleSubmit}
       noValidate
-      className="bg-light w-full p-3 md:p-4"
+      className="bg-light w-full py-3 md:py-4"
     >
       <div className="space-y-6">
         <div>

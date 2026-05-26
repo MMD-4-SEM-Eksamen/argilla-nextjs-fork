@@ -67,7 +67,7 @@ export default function ImageAndText({
 
   return (
     <section
-      className={`mx-auto flex max-w-360 flex-col gap-8 rounded-4xl px-4 py-4 sm:gap-6 sm:px-6 sm:py-6 lg:grid lg:grid-cols-2 lg:items-center lg:gap-12 lg:px-2 lg:py-0 ${layoutOrder} ${className}`}
+      className={`mx-auto flex max-w-360 flex-col gap-8 rounded-4xl py-4 sm:gap-6 sm:py-6 lg:grid lg:grid-cols-2 lg:items-center lg:gap-12 lg:py-0 ${layoutOrder} ${className}`}
     >
       <div
         className={`${reverseOrder ? "lg:order-2 lg:col-start-2" : "lg:order-1"}`}

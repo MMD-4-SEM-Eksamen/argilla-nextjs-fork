@@ -117,7 +117,7 @@ export default function Accordion({
   description = "lorem ipsum",
 }) {
   return (
-    <div className="bg-primary mx-auto w-full max-w-360 overflow-hidden px-8 py-10">
+    <div className="bg-primary mx-auto w-full max-w-360 overflow-hidden py-10">
       <div className="mx-auto max-w-3xl">
         <h2 className="text-secondary font-serif text-5xl">{title}</h2>
         <p className="text-light mb-6 font-sans">{description}</p>
