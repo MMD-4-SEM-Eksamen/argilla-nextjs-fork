@@ -46,25 +46,25 @@ export default function HeaderNav({ themeVariant = "primary" }) {
             className={`col-start-2 flex gap-8 px-4 max-lg:hidden [&>li>a]:cursor-pointer [&>li>a]:font-sans [&>li>a]:text-lg`}
           >
             <li className={`${theme.text}`}>
-              <Link href="/">Ydelser</Link>
+              <Link href="/ydelser">Ydelser</Link>
             </li>
             <li className={`${theme.text}`}>
-              <Link href="/">Om Os</Link>
+              <Link href="/omos">Om Os</Link>
             </li>
             <li className={`${theme.text}`}>
-              <Link href="/">Cases</Link>
+              <Link href="/cases">Cases</Link>
             </li>
             <li className={`${theme.text}`}>
-              <Link href="/">Kontakt</Link>
+              <Link href="/kontakt">Kontakt</Link>
             </li>
           </ul>
           <div className="col-start-3 flex w-full items-center justify-end gap-2.5 justify-self-end pl-2.5 max-lg:hidden">
             <LangSwitcher themeVariant={themeVariant} />
             <div className="flex items-center gap-6 px-4">
-              <LinkBtn btnLink="/" themeVariant={themeVariant}>
+              <LinkBtn btnLink="/koeb" themeVariant={themeVariant}>
                 Bestil
               </LinkBtn>
-              <Link href="/">
+              <Link href="/koeb">
                 <ShoppingCartSimpleIcon size={32} className={`${theme.icon}`} />
               </Link>
             </div>
@@ -95,28 +95,28 @@ export default function HeaderNav({ themeVariant = "primary" }) {
               className={`grid w-full place-content-center gap-6 text-center [&>li>a]:text-lg`}
             >
               <li className={`${theme.text}`}>
-                <Link href="/">Ydelser</Link>
+                <Link href="/ydelser">Ydelser</Link>
               </li>
               <li className={`${theme.text}`}>
-                <Link href="/">Om Os</Link>
+                <Link href="/omos">Om Os</Link>
               </li>
               <li className={`${theme.text}`}>
-                <Link href="/">Cases</Link>
+                <Link href="/cases">Cases</Link>
               </li>
               <li className={`${theme.text}`}>
-                <Link href="/">Kontakt</Link>
+                <Link href="/kontakt">Kontakt</Link>
               </li>
             </ul>
               <div className="relative inline-block">
                 <LinkBtn
-                  btnLink="/"
+                  btnLink="/koeb"
                   themeVariant={themeVariant}
                   btnClass="mx-auto"
                   initSize="medium"
                 >
                   Bestil
                 </LinkBtn>
-                <Link href="/" className="absolute right-0 pl-8 translate-x-full translate-y-1/4">
+                <Link href="/koeb" className="absolute right-0 pl-8 translate-x-full translate-y-1/4">
                   <ShoppingCartSimpleIcon
                     size={32}
                     className={`${theme.icon}`}

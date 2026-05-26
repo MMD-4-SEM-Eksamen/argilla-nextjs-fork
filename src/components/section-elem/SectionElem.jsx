@@ -114,14 +114,14 @@ export default function SectionElem({
             </p>
           </div>
           {btnChild && btnChild.type === "ActionBtn" && (
-            <div className="md:place-self-end">
+            <div className="justify-self-center md:place-self-end">
               <ActionBtn themeVariant={themeVariant} {...btnChild.props}>
                 {btnChild.label}
               </ActionBtn>
             </div>
           )}
           {btnChild && btnChild.type === "LinkBtn" && (
-            <div className="md:place-self-end">
+            <div className="justify-self-center md:place-self-end">
               <LinkBtn themeVariant={themeVariant} {...btnChild.props}>
                 {btnChild.label}
               </LinkBtn>

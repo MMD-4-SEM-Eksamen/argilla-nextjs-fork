@@ -65,7 +65,7 @@
   --max-w-text: 75ch;
   --mobile-pad-inline: 1.25rem;
 
-  --grid-col: 1fr minmax(0, var(--max-w-desktop)) 1fr;
+  --grid-col: 1fr minmax(0, calc((calc(var(--mobile-pad-inline)) * 2) + var(--max-w-desktop))) 1fr;
 
   --grid-col-break: 1fr minmax(0, var(--max-w-breakout)) 1fr;
 
@@ -179,6 +179,18 @@
 */
 
   main {
-    @apply grid-cols-max auto-rows-min max-w-content-max grid min-h-full gap-y-28 *:col-start-2 *:col-end-auto *:last:mb-28 md:min-h-dvh;
+    @apply  grid-cols-max auto-rows-min max-w-content-max grid min-h-full gap-y-28 *:col-start-2 *:col-end-auto *:last:mb-28 md:min-h-dvh;
+    
+    /* Overriding all non-breakout elements padding-inline with the mobile pad.  
+      - (grid-cols-max) has been updated to include the mobile-pad-inline on both ends.
+      - "!important" is therefore a temporary workaround, until all parent element components have
+      - had their inline paddings removed, as that is now automatically applied to all descendant elems.
+    
+      - To-Do: Update all components to not have "px-" values. 
+
+      */
+    > *:not(.col-span-full) {
+      padding-inline: var(--mobile-pad-inline)!important;
+    }
   }
 }

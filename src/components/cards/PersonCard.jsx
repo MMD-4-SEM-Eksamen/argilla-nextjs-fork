@@ -17,8 +17,6 @@
 // (cardCitation) - Determines citation text of body text, if none is provided, won't be rendered: cardCitation="Lorem McIpsum"
 
 // (tagChild) - Determines what the <TagElem> -> <span> child elem texts should be in the <TagElem> component: tagChild={[{ label: "Software" }, { label: "Hardware" }]}
-// (filterKey) - Used for filtering when used later on (UPDATE ME).
-// (baseUrl) - Sets the base url for filtering when used later on (UPDATE ME).
 
 // (btnChild) - Determins the button to use: btnChild = {{ type: "LinkBtn", label: "Se Mere", props: { btnLink: "/", initSize: "base" } }}
 
@@ -89,8 +87,6 @@ export default function PersonCard({
   cardTitle = "",
   cardText = "",
   tagChild,
-  filterKey = "category",
-  baseUrl = "/",
   contactIcon,
   btnChild
 }) {
@@ -131,8 +127,7 @@ export default function PersonCard({
               <TagElem
                 key={tag.label}
                 label={tag.label}
-                filterKey={tag.filterKey || filterKey}
-                baseUrl={baseUrl}
+                linkVariant={false}
                 themeVariant={themeVariant}
               />
             ))}

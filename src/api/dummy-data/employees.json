@@ -1,0 +1,245 @@
+[
+  {
+    "id": 1,
+    "slug": "lars-jensen",
+    "image": "/images/employees/employee-1.webp",
+    "altTxt": "Medarbejder 1",
+    "name": "Lars Jensen",
+    "about": "CEO og stifter af virksomheden med 20+ års erfaring inden for enterprise software.",
+    "aboutLong": "Lars Jensen er en erfaren iværksætter og leder med mere end 20 års dedikeret arbejde inden for enterprise software. Han stiftede virksomheden med en klar vision om at bygge skalerbare og brugervenlige løsninger til B2B-markedet. Under hans ledelse er virksomheden vokset fra en lille startup til en anerkendt aktør i branchen. Lars er kendt for sin evne til at kombinere strategisk tænkning med en dyb teknisk forståelse, og han sætter altid holdet og kunderne i centrum.",
+    "pastExperiences": {
+      "description": "Inden han grundlagde virksomheden, arbejdede Lars som VP of Product hos en nordisk softwarevirksomhed, hvor han ledede lanceringen af flere enterprise-løsninger med fokus på ERP og CRM-systemer. Han har tidligere været konsulent hos McKinsey med speciale i digital transformation og har bestyrelseserfaring fra to tech-startups i Sverige og Danmark.",
+      "bulletPoints": [
+        "VP of Product hos nordisk enterprise softwarevirksomhed",
+        "Konsulent hos nordisk enterprise - speciale i digital transformation",
+        "Bestyrelsesmedlem i to tech-startups i Skandinavien",
+        "20+ års erfaring med ERP- og CRM-løsninger"
+      ]
+    },
+    "jobTitle": "CEO",
+    "contact": [
+      { "icon": "linkedin", "addr": "https://linkedin.com/" },
+      { "icon": "phone", "addr": "tel:+123456789" },
+      { "icon": "email", "addr": "mailto:lorem@ipsum" }
+    ],
+    "btn": {
+      "label": "Læs mere"
+    }
+  },
+  {
+    "id": 2,
+    "slug": "jesper-pedersen",
+    "image": "/images/employees/employee-2.webp",
+    "altTxt": "Medarbejder 2",
+    "name": "Jesper Pedersen",
+    "about": "COO og medstifter af virksomheden med 10+ års erfaring inden for B2B SaaS virksomheder.",
+    "aboutLong": "Jesper Pedersen er medstifter og COO med et skarpt blik for operationel excellence og forretningsudvikling. Med over 10 års erfaring fra B2B SaaS-verdenen har han opbygget en solid forståelse for, hvad der skal til for at skalere en virksomhed effektivt. Jesper er den drivende kraft bag virksomhedens interne processer, partnerrelationer og go-to-market-strategi. Han brænder for at bygge stærke teams og skabe strukturer, der understøtter vækst.",
+    "pastExperiences": {
+      "description": "Jesper har tidligere haft stillinger som Head of Operations og Business Development Manager hos to veletablerede SaaS-virksomheder i Danmark. Han har desuden erfaring fra venture-backede startups, hvor han var med til at drive en Series A-runde og efterfølgende skalering af organisationen fra 15 til 80 medarbejdere.",
+      "bulletPoints": [
+        "Head of Operations og BizDev Manager i dansk SaaS-sektor",
+        "Drev Series A-fundraising i venture-backed startup",
+        "Skalerede organisation fra 15 til 80 medarbejdere",
+        "10+ års erfaring med B2B go-to-market og vækststrategi"
+      ]
+    },
+    "jobTitle": "COO",
+    "contact": [
+      { "icon": "linkedin", "addr": "https://linkedin.com/" },
+      { "icon": "phone", "addr": "tel:+123456789" },
+      { "icon": "email", "addr": "mailto:lorem@ipsum" }
+    ],
+    "btn": {
+      "label": "Læs mere"
+    }
+  },
+  {
+    "id": 3,
+    "slug": "mikkel-andersen",
+    "image": "/images/employees/employee-3.webp",
+    "altTxt": "Medarbejder 3",
+    "name": "Mikkel Andersen",
+    "about": "CTO med 15+ års erfaring inden for cloud arkitektur, skalerbare systemer og softwareudvikling.",
+    "aboutLong": "Mikkel Andersen er en teknisk leder med dyb ekspertise inden for cloud-native arkitektur og skalerbare distribuerede systemer. Med 15+ år i branchen har han stået i spidsen for en lang række komplekse softwareprojekter og guidet ingeniørteams til at levere løsninger af høj kvalitet. Mikkel er en pragmatisk problemløser, der kombinerer teknisk dybde med evnen til at kommunikere klart på tværs af organisationen. Han er en varm fortaler for DevOps-kultur og kontinuerlig forbedring.",
+    "pastExperiences": {
+      "description": "Mikkel har arbejdet som Principal Engineer og senere Engineering Director hos en international SaaS-virksomhed med kunder i 30+ lande. Han har desuden konsulentbaggrund fra IBM og har bidraget til open source-projekter inden for microservices og containerorkestrering med Kubernetes og Docker.",
+      "bulletPoints": [
+        "Engineering Director hos international SaaS-virksomhed, 30+ lande",
+        "IT-konsulent hos IBM med fokus på enterprise-arkitektur",
+        "Bidragyder til open source inden for microservices",
+        "Dyb ekspertise i Kubernetes, Docker og cloud-native systemer"
+      ]
+    },
+    "jobTitle": "CTO",
+    "contact": [
+      { "icon": "linkedin", "addr": "https://linkedin.com/" },
+      { "icon": "phone", "addr": "tel:+123456789" },
+      { "icon": "email", "addr": "mailto:lorem@ipsum" }
+    ],
+    "btn": {
+      "label": "Læs mere"
+    }
+  },
+  {
+    "id": 4,
+    "slug": "frederik-nielsen",
+    "image": "/images/employees/employee-4.webp",
+    "altTxt": "Medarbejder 4",
+    "name": "Frederik Nielsen",
+    "about": "Softwareudvikler med fokus på moderne webapplikationer og backend integrationer.",
+    "aboutLong": "Frederik Nielsen er en passioneret softwareudvikler med en stærk faglighed inden for moderne webteknologier og backend-systemer. Han trives med at løse komplekse tekniske udfordringer og har en naturlig trang til at levere clean, vedligeholdelsesvenlig kode. Frederik er en aktiv bidragyder i det interne udviklingsmiljø og deler gerne sin viden med kollegaerne. Han er altid opdateret på de seneste tendenser inden for softwareudvikling.",
+    "pastExperiences": {
+      "description": "Før han kom til virksomheden, arbejdede Frederik som fullstack-udvikler hos et digitalt bureau i København, hvor han byggede webapplikationer og API-integrationer for en bred vifte af kunder. Han har desuden freelance-erfaring med Node.js-backends og React-frontends for startups og SMV'er.",
+      "bulletPoints": [
+        "Fullstack-udvikler hos digitalt bureau i København",
+        "Bygget API-integrationer og webapplikationer for diverse kunder",
+        "Freelance-erfaring med Node.js og React",
+        "Projekter for startups og SMV'er"
+      ]
+    },
+    "jobTitle": "Software Udvikler",
+    "contact": [
+      { "icon": "linkedin", "addr": "https://linkedin.com/" },
+      { "icon": "phone", "addr": "tel:+123456789" },
+      { "icon": "email", "addr": "mailto:lorem@ipsum" }
+    ],
+    "btn": {
+      "label": "Læs mere"
+    }
+  },
+  {
+    "id": 5,
+    "slug": "camilla-sørensen",
+    "image": "/images/employees/employee-5.webp",
+    "altTxt": "Medarbejder 5",
+    "name": "Camilla Sørensen",
+    "about": "HR ansvarlig med erfaring inden for rekruttering, medarbejderudvikling og virksomhedskultur.",
+    "aboutLong": "Camilla Sørensen er virksomhedens hjerte, når det kommer til mennesker og kultur. Med en stærk baggrund inden for HR-strategi, rekruttering og medarbejderudvikling sikrer hun, at organisationen tiltrækker og fastholder de bedste talenter. Camilla arbejder målrettet på at skabe et inkluderende og motiverende arbejdsmiljø, og hun er en trofast sparringspartner for både ledelse og medarbejdere. Hun tror på, at en stærk kultur er fundamentet for enhver succesfuld virksomhed.",
+    "pastExperiences": {
+      "description": "Camilla har tidligere arbejdet som HR Business Partner hos en større dansk detailkæde og som rekrutteringskonsulent i et specialiseret tech-bureau. Hun har løbende efteruddannet sig inden for organisationspsykologi og har certificeringer i DISC-profil og Gallup StrengthsFinder.",
+      "bulletPoints": [
+        "HR Business Partner hos større dansk detailkæde",
+        "Rekrutteringskonsulent i specialiseret tech-bureau",
+        "Certificeret i DISC-profil og Gallup StrengthsFinder",
+        "Efteruddannelse inden for organisationspsykologi"
+      ]
+    },
+    "jobTitle": "HR Leder",
+    "contact": [
+      { "icon": "linkedin", "addr": "https://linkedin.com/" },
+      { "icon": "phone", "addr": "tel:+123456789" },
+      { "icon": "email", "addr": "mailto:lorem@ipsum" }
+    ],
+    "btn": {
+      "label": "Læs mere"
+    }
+  },
+  {
+    "id": 6,
+    "slug": "thomas-madsen",
+    "image": "/images/employees/employee-6.webp",
+    "altTxt": "Medarbejder 6",
+    "name": "Thomas Madsen",
+    "about": "Projektleder med erfaring i agile workflows, kundehåndtering og tværfaglige teams.",
+    "aboutLong": "Thomas Madsen er en struktureret og løsningsorienteret projektleder, der sikrer, at projekter landes til tiden og inden for budgettet. Han har et skarpt overblik over agile metoder og er ekspert i at koordinere tværfaglige teams og håndtere kundekontakt på et højt professionelt niveau. Thomas fungerer som bindeleddet mellem udviklere, designere og kunder, og han formår at skabe klarhed selv i komplekse situationer.",
+    "pastExperiences": {
+      "description": "Thomas har erfaring som Scrum Master og projektleder fra en digital transformationsafdeling i en mellemstor dansk virksomhed. Han har desuden arbejdet med projektstyring af IT-implementeringer i den offentlige sektor og er certificeret PRINCE2 Practitioner og Certified Scrum Master (CSM).",
+      "bulletPoints": [
+        "Scrum Master og projektleder i digital transformationsafdeling",
+        "IT-projektstyring for den offentlige sektor",
+        "Certificeret PRINCE2 Practitioner",
+        "Certified Scrum Master (CSM)"
+      ]
+    },
+    "jobTitle": "Projectstyrer",
+    "contact": [
+      { "icon": "linkedin", "addr": "https://linkedin.com/" },
+      { "icon": "phone", "addr": "tel:+123456789" },
+      { "icon": "email", "addr": "mailto:lorem@ipsum" }
+    ],
+    "btn": {
+      "label": "Læs mere"
+    }
+  },
+  {
+    "id": 7,
+    "slug": "mohammed-ali",
+    "image": "/images/employees/employee-7.webp",
+    "altTxt": "Medarbejder 7",
+    "name": "Mohammed Ali",
+    "about": "Frontend udvikler med speciale i responsive brugergrænseflader og moderne JavaScript frameworks.",
+    "aboutLong": "Mohammed Ali er en kreativ og teknisk stærk frontend-udvikler med en passion for at bygge intuitive og tilgængelige brugergrænseflader. Han har et skarpt øje for detaljen og kombinerer æstetisk sans med en solid forståelse for webteknologier. Mohammed er go-to-personen, når det handler om performance-optimering og komponentbaseret UI-arkitektur. Han er en engageret teamplayer, der altid bidrager med positive energi og konstruktive løsninger.",
+    "pastExperiences": {
+      "description": "Mohammed har arbejdet som frontend-udvikler hos et produktbaseret tech-selskab, hvor han udviklede komplekse React-applikationer med fokus på skalerbarhed og tilgængelighed. Han har desuden freelance-erfaring med Vue.js og Next.js og har bidraget til open source UI-komponentbiblioteker.",
+      "bulletPoints": [
+        "Frontend-udvikler hos produktbaseret tech-selskab",
+        "Specialiseret i React med fokus på tilgængelighed og performance",
+        "Freelance-projekter med Vue.js og Next.js",
+        "Bidragyder til open source UI-komponentbiblioteker"
+      ]
+    },
+    "jobTitle": "Frontend Dev",
+    "contact": [
+      { "icon": "linkedin", "addr": "https://linkedin.com/" },
+      { "icon": "phone", "addr": "tel:+123456789" },
+      { "icon": "email", "addr": "mailto:lorem@ipsum" }
+    ],
+    "btn": {
+      "label": "Læs mere"
+    }
+  },
+  {
+    "id": 8,
+    "slug": "sofie-larsen",
+    "image": "/images/employees/employee-8.webp",
+    "altTxt": "Medarbejder 8",
+    "name": "Sofie Larsen",
+    "about": "Fullstack udvikler med erfaring inden for både frontend, backend og cloud-baserede løsninger.",
+    "aboutLong": "Sofie Larsen er en alsidig og erfaren fullstack-udvikler, der trives med at arbejde på tværs af hele tech-stakken. Fra brugervenlige frontends til robuste backends og cloud-infrastruktur – Sofie leverer helhedsorienterede løsninger med høj kvalitet. Hun er kendetegnet ved sin systematiske tilgang og sin evne til hurtigt at sætte sig ind i nye teknologier og forretningsbehov. Sofie er en naturlig mentor for juniors i teamet.",
+    "pastExperiences": {
+      "description": "Sofie kommer fra en stilling som fullstack-udvikler i en fintech-startup, hvor hun havde ansvar for både produktudvikling og cloud-deployment på AWS. Hun har tidligere haft en rolle som backend-developer hos en etableret dansk IT-virksomhed med fokus på Java og mikroservicearkitektur.",
+      "bulletPoints": [
+        "Fullstack-udvikler i fintech-startup med AWS-deployment",
+        "Backend-developer hos etableret dansk IT-virksomhed",
+        "Erfaring med Java og mikroservicearkitektur",
+        "Ansvar for produktudvikling og cloud-infrastruktur"
+      ]
+    },
+    "jobTitle": "Fullstack Dev",
+    "contact": [
+      { "icon": "linkedin", "addr": "https://linkedin.com/" },
+      { "icon": "phone", "addr": "tel:+123456789" },
+      { "icon": "email", "addr": "mailto:lorem@ipsum" }
+    ],
+    "btn": {
+      "label": "Læs mere"
+    }
+  },
+  {
+    "id": 9,
+    "slug": "andreas-holm",
+    "image": "/images/employees/employee-9.webp",
+    "altTxt": "Medarbejder 9",
+    "name": "Andreas Holm",
+    "about": "Backend udvikler med fokus på API design, databaser og skalerbar serverarkitektur.",
+    "aboutLong": "Andreas Holm er en dedikeret backend-udvikler med en dyb passion for at bygge robuste og skalerbare serversystemer. Han har et skarpt fokus på API-design, dataintegritet og systemperformance, og han er altid optaget af at finde den elegante, vedligeholdbare løsning frem for den hurtige fix. Andreas er en stille, men uvurderlig kraft i udviklingsholdet og er den person, man henvender sig til, når arkitekturbeslutninger skal træffes.",
+    "pastExperiences": {
+      "description": "Inden han kom til virksomheden, arbejdede Andreas som backend-engineer hos en cloud-natives softwarevirksomhed, hvor han designede og drev REST- og GraphQL-API'er for millioner af slutbrugere. Han har derudover erfaring med PostgreSQL, Redis og event-driven arkitekturer med Kafka, samt DevOps-opgaver i Azure-miljøer.",
+      "bulletPoints": [
+        "Backend-engineer hos cloud-native softwarevirksomhed",
+        "Design og drift af REST- og GraphQL-API'er i stor skala",
+        "Erfaring med PostgreSQL, Redis og Kafka",
+        "DevOps og infrastruktur i Azure-miljøer"
+      ]
+    },
+    "jobTitle": "Backend Dev",
+    "contact": [
+      { "icon": "linkedin", "addr": "https://linkedin.com/" },
+      { "icon": "phone", "addr": "tel:+123456789" },
+      { "icon": "email", "addr": "mailto:lorem@ipsum" }
+    ],
+    "btn": {
+      "label": "Læs mere"
+    }
+  }
+]

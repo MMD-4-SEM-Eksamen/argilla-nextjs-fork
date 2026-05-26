@@ -1,0 +1,57 @@
+{
+  "hero": {
+    "imageSrc": "/images/team2.webp",
+    "altTxt": "Team Image",
+    "width": "1920",
+    "height": "1080"
+  },
+  "introSection": {
+    "heading": "Om Os",
+    "bodyText": "Bag Argilla sidder et dedikeret team med dyb erfaring i forretningssystemer og softwareudvikling. Vi tror på at de bedste løsninger opstår i tæt samarbejde med vores kunder, og at teknologi skal tjene forretningen, ikke omvendt."
+  },
+  "missionSection": {
+    "title": "Vores Mission",
+    "leftHeading": "Bag Teamet",
+    "leftDescription": "Hos Argilla tror vi på, at alle virksomheder – uanset størrelse – fortjener adgang til professionelle digitale værktøjer. Vores platform giver dig mulighed for at bygge, tilpasse og skalere applikationer hurtigt og effektivt, uden at du behøver en stor IT-afdeling bag dig.",
+    "rightHeading": "Fremtidens Software",
+    "rightDescription": "Vi bygger fremtidens forretningssoftware – ikke kun til de store spillere, men til alle der vil vækste smart. Med Argilla får din virksomhed de samme digitale muskler som markedets største aktører, til en pris og kompleksitet der giver mening."
+  },
+  "factsSection": {
+    "title": "Vores Historie",
+    "description": "Argilla blev grundlagt af et team med dyb erfaring inden for enterprise-software og forretningsautomatisering. Vi har set på nærmeste hold, hvor tidskrævende og dyrt det kan være at bygge og vedligeholde skræddersyede systemer – og vi besluttede os for at gøre det anderledes. Med Argilla får danske virksomheder en moderne, fleksibel platform, der vokser med deres behov."
+  },
+  "lineItems": [
+    {
+      "id": 1,
+      "title": "Erfaring der tæller",
+      "body": "Vi bringer mange års hands-on erfaring fra enterprise-branchen ind i en moderne SaaS-platform. Det betyder, at Argilla ikke bare er bygget til udviklere – det er bygget til de mennesker, der rent faktisk skal bruge det i hverdagen."
+    },
+    {
+      "id": 2,
+      "title": "Enkel onboarding, hurtige resultater",
+      "body": "Kom i gang på få dage – ikke måneder. Vores platform er intuitiv og kræver minimal opsætning, så dit team kan fokusere på at bygge løsninger frem for at kæmpe med infrastruktur."
+    },
+    {
+      "id": 3,
+      "title": "Bygget til danske virksomheder",
+      "body": "Vi kender det danske marked og de udfordringer, mellemstore og store virksomheder møder. Argilla er designet til at passe ind i de arbejdsgange og strukturer, der allerede eksisterer i din organisation."
+    },
+    {
+      "id": 4,
+      "title": "Skalerbarhed uden kompromis",
+      "body": "Uanset om du er en vækstvirksomhed eller en etableret organisation, skalerer Argilla med dig. Du betaler for det du bruger, og udvider nemt når behovene ændrer sig."
+    }
+  ],
+  "employeeCardSection": {
+    "heading": "Teamet",
+    "bodyText": "Bag Argilla sidder et dedikeret team med dyb erfaring i forretningssystemer og softwareudvikling. Vi tror på at de bedste løsninger opstår i tæt samarbejde med vores kunder, og at teknologi skal tjene forretningen, ikke omvendt.",
+    "btnChild": {
+      "type": "LinkBtn",
+      "btnLink": "/teamet",
+      "label": "Se Teamet",
+      "props": {
+        "initSize": "medium"
+      }
+    }
+  }
+}

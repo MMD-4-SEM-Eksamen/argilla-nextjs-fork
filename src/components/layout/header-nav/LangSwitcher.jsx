@@ -1,5 +1,6 @@
 "use client";
-import { useState, useRef, useEffect, useRouter, useSearchParams } from "react";
+import { useState, useRef, useEffect } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useLanguage } from "@/context/lang-context/useLanguage";
 import {
   CaretDownIcon,

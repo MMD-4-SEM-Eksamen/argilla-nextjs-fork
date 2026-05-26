@@ -1,0 +1,398 @@
+[
+  {
+    "id": 1,
+    "slug": "virksomhed-1",
+    "card": {
+      "image": "/images/blocks.webp",
+      "altTxt": "Billede af virksomhed",
+      "heading": "Digitalisering af lagerstyring i produktionsvirksomhed",
+      "description": "En mellemstor produktionsvirksomhed erstattede manuelle Excel-ark med et skræddersyet lagerstyringsmodul bygget i Argilla, konfigureret og vedligeholdt af deres eget team.",
+      "tag": [{ "label": "Software" }, { "label": "Open-Source" }],
+      "btn": {
+        "label": "Læs mere"
+      }
+    },
+    "caseContent": {
+      "title": "Digitalisering af lagerstyring i produktionsvirksomhed",
+      "imgTextSection": {
+        "first": {
+          "image": "/images/blocks.webp",
+          "altTxt": "Billede af virksomhed",
+          "heading": "Digitalisering af lagerstyring i produktionsvirksomhed",
+          "description": "En mellemstor produktionsvirksomhed erstattede manuelle Excel-ark med et skræddersyet lagerstyringsmodul bygget i Argilla, konfigureret og vedligeholdt af deres eget team."
+        },
+        "second": {
+          "image": "/images/blocks.webp",
+          "altTxt": "Billede af virksomhed",
+          "heading": "Digitalisering af lagerstyring i produktionsvirksomhed",
+          "description": "En mellemstor produktionsvirksomhed erstattede manuelle Excel-ark med et skræddersyet lagerstyringsmodul bygget i Argilla, konfigureret og vedligeholdt af deres eget team."
+        }
+      },
+      "dualTextSection": {
+        "title": "Lorem",
+        "textBlocks": {
+          "left": {
+            "heading": "Lorem Ipsum",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          },
+          "right": {
+            "heading": "Dolor Sit",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 2,
+    "slug": "virksomhed-2",
+    "card": {
+      "image": "/images/laptopondesk.webp",
+      "altTxt": "Billede af virksomhed",
+      "heading": "Unified kundeportal for nordisk forsikringsselskab",
+      "description": "Argilla dannede fundamentet for en samlet kundeportal der integrerede data fra tre separate systemer og gav sagsbehandlere ét overblik.",
+      "tag": [{ "label": "Hardware" }, { "label": "B2B" }],
+      "btn": {
+        "label": "Læs mere"
+      }
+    },
+    "caseContent": {
+      "title": "Unified kundeportal for nordisk forsikringsselskab",
+      "imgTextSection": {
+        "first": {
+          "image": "/images/laptopondesk.webp",
+          "altTxt": "Billede af virksomhed",
+          "heading": "Unified kundeportal for nordisk forsikringsselskab",
+          "description": "Argilla dannede fundamentet for en samlet kundeportal der integrerede data fra tre separate systemer og gav sagsbehandlere ét overblik."
+        },
+        "second": {
+          "image": "/images/laptopondesk.webp",
+          "altTxt": "Billede af virksomhed",
+          "heading": "Unified kundeportal for nordisk forsikringsselskab",
+          "description": "Argilla dannede fundamentet for en samlet kundeportal der integrerede data fra tre separate systemer og gav sagsbehandlere ét overblik."
+        }
+      },
+      "dualTextSection": {
+        "title": "Lorem",
+        "textBlocks": {
+          "left": {
+            "heading": "Lorem Ipsum",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          },
+          "right": {
+            "heading": "Dolor Sit",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 3,
+    "slug": "virksomhed-3",
+    "card": {
+      "image": "/images/laptop.webp",
+      "altTxt": "Billede af virksomhed",
+      "heading": "Compliance-workflow til reguleret lægemiddelindustri",
+      "description": "Med Argilla kunne virksomheden selv opdatere godkendelsesprocesser og dokumentationskrav i takt med lovgivningsændringer uden at involvere eksterne udviklere.",
+      "tag": [{ "label": "Software" }, { "label": "Open-Source" }],
+      "btn": {
+        "label": "Læs mere"
+      }
+    },
+    "caseContent": {
+      "title": "Compliance-workflow til reguleret lægemiddelindustri",
+      "imgTextSection": {
+        "first": {
+          "image": "/images/laptop.webp",
+          "altTxt": "Billede af virksomhed",
+          "heading": "Compliance-workflow til reguleret lægemiddelindustri",
+          "description": "Med Argilla kunne virksomheden selv opdatere godkendelsesprocesser og dokumentationskrav i takt med lovgivningsændringer uden at involvere eksterne udviklere."
+        },
+        "second": {
+          "image": "/images/laptop.webp",
+          "altTxt": "Billede af virksomhed",
+          "heading": "Compliance-workflow til reguleret lægemiddelindustri",
+          "description": "Med Argilla kunne virksomheden selv opdatere godkendelsesprocesser og dokumentationskrav i takt med lovgivningsændringer uden at involvere eksterne udviklere."
+        }
+      },
+      "dualTextSection": {
+        "title": "Lorem",
+        "textBlocks": {
+          "left": {
+            "heading": "Lorem Ipsum",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          },
+          "right": {
+            "heading": "Dolor Sit",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 4,
+    "slug": "virksomhed-4",
+    "card": {
+      "image": "/images/team2.webp",
+      "altTxt": "Billede af virksomhed",
+      "heading": "HR-platform til kommunal organisation",
+      "description": "En kommunal organisation fik en HR-løsning der matchede deres interne processer præcis med fuld datakontrol og mulighed for selv at justere skærmbilleder og flows.",
+      "tag": [{ "label": "Hardware" }, { "label": "B2B" }],
+      "btn": {
+        "label": "Læs mere"
+      }
+    },
+    "caseContent": {
+      "title": "HR-platform til kommunal organisation",
+      "imgTextSection": {
+        "first": {
+          "image": "/images/team2.webp",
+          "altTxt": "Billede af virksomhed",
+          "heading": "HR-platform til kommunal organisation",
+          "description": "En kommunal organisation fik en HR-løsning der matchede deres interne processer præcis med fuld datakontrol og mulighed for selv at justere skærmbilleder og flows."
+        },
+        "second": {
+          "image": "/images/team2.webp",
+          "altTxt": "Billede af virksomhed",
+          "heading": "HR-platform til kommunal organisation",
+          "description": "En kommunal organisation fik en HR-løsning der matchede deres interne processer præcis med fuld datakontrol og mulighed for selv at justere skærmbilleder og flows."
+        }
+      },
+      "dualTextSection": {
+        "title": "Lorem",
+        "textBlocks": {
+          "left": {
+            "heading": "Lorem Ipsum",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          },
+          "right": {
+            "heading": "Dolor Sit",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 5,
+    "slug": "virksomhed-5",
+    "card": {
+      "image": "/images/payment.webp",
+      "altTxt": "Billede af virksomhed",
+      "heading": "Ordrehåndtering og fakturering for grossist",
+      "description": "En grossistvirksomhed med komplekse prisstrukturer og kundeaftaler centraliserede hele ordreprocessen i Argilla og reducerede fejl markant.",
+      "tag": [{ "label": "Software" }, { "label": "Open-Source" }],
+      "btn": {
+        "label": "Læs mere"
+      }
+    },
+    "caseContent": {
+      "title": "Ordrehåndtering og fakturering for grossist",
+      "imgTextSection": {
+        "first": {
+          "image": "/images/payment.webp",
+          "altTxt": "Billede af virksomhed",
+          "heading": "Ordrehåndtering og fakturering for grossist",
+          "description": "En grossistvirksomhed med komplekse prisstrukturer og kundeaftaler centraliserede hele ordreprocessen i Argilla og reducerede fejl markant."
+        },
+        "second": {
+          "image": "/images/payment.webp",
+          "altTxt": "Billede af virksomhed",
+          "heading": "Ordrehåndtering og fakturering for grossist",
+          "description": "En grossistvirksomhed med komplekse prisstrukturer og kundeaftaler centraliserede hele ordreprocessen i Argilla og reducerede fejl markant."
+        }
+      },
+      "dualTextSection": {
+        "title": "Lorem",
+        "textBlocks": {
+          "left": {
+            "heading": "Lorem Ipsum",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          },
+          "right": {
+            "heading": "Dolor Sit",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 6,
+    "slug": "virksomhed-6",
+    "card": {
+      "image": "/images/working.webp",
+      "altTxt": "Billede af virksomhed",
+      "heading": "Serviceportal for teknisk serviceudbyder",
+      "description": "Teknikere i marken og back-office fik et fælles system til opgavestyring og rapportering — hostet og vedligeholdt af Argilla direkte på kundens egne servere.",
+      "tag": [{ "label": "Hardware" }, { "label": "B2B" }],
+      "btn": {
+        "label": "Læs mere"
+      }
+    },
+    "caseContent": {
+      "title": "Serviceportal for teknisk serviceudbyder",
+      "imgTextSection": {
+        "first": {
+          "image": "/images/working.webp",
+          "altTxt": "Billede af virksomhed",
+          "heading": "Serviceportal for teknisk serviceudbyder",
+          "description": "Teknikere i marken og back-office fik et fælles system til opgavestyring og rapportering — hostet og vedligeholdt af Argilla direkte på kundens egne servere."
+        },
+        "second": {
+          "image": "/images/working.webp",
+          "altTxt": "Billede af virksomhed",
+          "heading": "Serviceportal for teknisk serviceudbyder",
+          "description": "Teknikere i marken og back-office fik et fælles system til opgavestyring og rapportering — hostet og vedligeholdt af Argilla direkte på kundens egne servere."
+        }
+      },
+      "dualTextSection": {
+        "title": "Lorem",
+        "textBlocks": {
+          "left": {
+            "heading": "Lorem Ipsum",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          },
+          "right": {
+            "heading": "Dolor Sit",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 7,
+    "slug": "virksomhed-7",
+    "card": {
+      "image": "/images/process.webp",
+      "altTxt": "Billede af virksomhed",
+      "heading": "Tilbuds- og kontraktstyring for ingeniørvirksomhed",
+      "description": "En ingeniørvirksomhed digitaliserede en kompleks tilbudsproces med mange variabler og godkendelsestrin, og kan nu selv tilpasse processen i takt med forretningsudviklingen.",
+      "tag": [{ "label": "Software" }, { "label": "Open-Source" }],
+      "btn": {
+        "label": "Læs mere"
+      }
+    },
+    "caseContent": {
+      "title": "Tilbuds- og kontraktstyring for ingeniørvirksomhed",
+      "imgTextSection": {
+        "first": {
+          "image": "/images/process.webp",
+          "altTxt": "Billede af virksomhed",
+          "heading": "Tilbuds- og kontraktstyring for ingeniørvirksomhed",
+          "description": "En ingeniørvirksomhed digitaliserede en kompleks tilbudsproces med mange variabler og godkendelsestrin, og kan nu selv tilpasse processen i takt med forretningsudviklingen."
+        },
+        "second": {
+          "image": "/images/process.webp",
+          "altTxt": "Billede af virksomhed",
+          "heading": "Tilbuds- og kontraktstyring for ingeniørvirksomhed",
+          "description": "En ingeniørvirksomhed digitaliserede en kompleks tilbudsproces med mange variabler og godkendelsestrin, og kan nu selv tilpasse processen i takt med forretningsudviklingen."
+        }
+      },
+      "dualTextSection": {
+        "title": "Lorem",
+        "textBlocks": {
+          "left": {
+            "heading": "Lorem Ipsum",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          },
+          "right": {
+            "heading": "Dolor Sit",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 8,
+    "slug": "virksomhed-8",
+    "card": {
+      "image": "/images/hands.webp",
+      "altTxt": "Billede af virksomhed",
+      "heading": "Medlemssystem for brancheorganisation",
+      "description": "En national brancheorganisation fik et fleksibelt medlemssystem der håndterer kontingenter, arrangementer og kommunikation — og som de selv kan vedligeholde og udbygge.",
+      "tag": [{ "label": "Hardware" }, { "label": "B2B" }],
+      "btn": {
+        "label": "Læs mere"
+      }
+    },
+    "caseContent": {
+      "title": "Medlemssystem for brancheorganisation",
+      "imgTextSection": {
+        "first": {
+          "image": "/images/hands.webp",
+          "altTxt": "Billede af virksomhed",
+          "heading": "Medlemssystem for brancheorganisation",
+          "description": "En national brancheorganisation fik et fleksibelt medlemssystem der håndterer kontingenter, arrangementer og kommunikation — og som de selv kan vedligeholde og udbygge."
+        },
+        "second": {
+          "image": "/images/hands.webp",
+          "altTxt": "Billede af virksomhed",
+          "heading": "Medlemssystem for brancheorganisation",
+          "description": "En national brancheorganisation fik et fleksibelt medlemssystem der håndterer kontingenter, arrangementer og kommunikation — og som de selv kan vedligeholde og udbygge."
+        }
+      },
+      "dualTextSection": {
+        "title": "Lorem",
+        "textBlocks": {
+          "left": {
+            "heading": "Lorem Ipsum",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          },
+          "right": {
+            "heading": "Dolor Sit",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 9,
+    "slug": "virksomhed-9",
+    "card": {
+      "image": "/images/storage.webp",
+      "altTxt": "Billede af virksomhed",
+      "heading": "Intern procesplatform for logistikvirksomhed",
+      "description": "En logistikvirksomhed med høj kompleksitet i ruteplanlægning og chaufførstyring fik en samlet platform der erstattede en række ældre systemer og siloer.",
+      "tag": [{ "label": "Software" }, { "label": "Open-Source" }],
+      "btn": {
+        "label": "Læs mere"
+      }
+    },
+    "caseContent": {
+      "title": "Intern procesplatform for logistikvirksomhed",
+      "imgTextSection": {
+        "first": {
+          "image": "/images/storage.webp",
+          "altTxt": "Billede af virksomhed",
+          "heading": "Intern procesplatform for logistikvirksomhed",
+          "description": "En logistikvirksomhed med høj kompleksitet i ruteplanlægning og chaufførstyring fik en samlet platform der erstattede en række ældre systemer og siloer."
+        },
+        "second": {
+          "image": "/images/storage.webp",
+          "altTxt": "Billede af virksomhed",
+          "heading": "Intern procesplatform for logistikvirksomhed",
+          "description": "En logistikvirksomhed med høj kompleksitet i ruteplanlægning og chaufførstyring fik en samlet platform der erstattede en række ældre systemer og siloer."
+        }
+      },
+      "dualTextSection": {
+        "title": "Lorem",
+        "textBlocks": {
+          "left": {
+            "heading": "Lorem Ipsum",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          },
+          "right": {
+            "heading": "Dolor Sit",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          }
+        }
+      }
+    }
+  }
+]

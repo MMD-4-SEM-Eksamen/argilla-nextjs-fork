@@ -1,0 +1,20 @@
+{
+  "introSection": {
+    "imageSrc": "/images/team2.webp",
+    "altTxt": "Team Image",
+    "heading": "Teamet",
+    "bodyText": "Vores team består af specialister inden for design, udvikling og digital strategi, som arbejder tæt sammen om at skabe stabile og brugervenlige softwareløsninger. Vi kombinerer teknisk ekspertise med nysgerrighed og samarbejde for at omsætte idéer til funktionelle produkter. Med fokus på kvalitet, vidensdeling og kontinuerlig forbedring udvikler vi løsninger, der både understøtter forretningen i dag og kan vokse med fremtidens behov."
+  },
+  "employeeCardSection": {
+    "heading": "Menneskerne bag Argilla",
+    "bodyText": "Bag Argilla sidder et dedikeret team med dyb erfaring i forretningssystemer og softwareudvikling. Vi tror på at de bedste løsninger opstår i tæt samarbejde med vores kunder, og at teknologi skal tjene forretningen, ikke omvendt.",
+    "btnChild": {
+      "type": "LinkBtn",
+      "btnLink": "/teamet",
+      "label": "Se Teamet",
+      "props": {
+        "initSize": "medium"
+      }
+    }
+  }
+}
