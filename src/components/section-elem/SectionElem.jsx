@@ -84,7 +84,7 @@ export default function SectionElem({
 
   return (
     <section
-      className={`${breakout ? "col-span-full" : ""} ${elemStyle} max-md:px-mobile-inline grid place-items-center gap-20 max-md:py-7 md:gap-24`}
+      className={`${breakout ? "col-span-full" : ""} ${elemStyle} grid place-items-center gap-20 max-md:py-7 md:gap-24`}
     >
       {centeredVariant ? (
         <div

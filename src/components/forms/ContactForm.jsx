@@ -114,7 +114,7 @@ export default function ContactForm() {
     <form
       onSubmit={handleSubmit}
       noValidate
-      className="mx-auto w-full max-w-360 p-3 md:p-4"
+      className="mx-auto w-full max-w-360 py-3 md:py-4"
     >
       <h2 className="text-primary font-serif text-5xl">Lad os tage en snak</h2>
       <p className="text-dark mt-2 mb-8 max-w-prose font-sans">

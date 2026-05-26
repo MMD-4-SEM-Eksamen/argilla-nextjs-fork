@@ -68,7 +68,7 @@ export default function Newsletter() {
     "w-full rounded-xl bg-secondary px-4 py-3 text-primary font-sans placeholder:text-primary/70 outline-none ring-1 ring-transparent transition focus:ring-primary";
 
   return (
-    <section className="w-full max-w-80 p-4 md:p-6">
+    <section className="w-full max-w-80 p-4 md:p-6 max-md:mx-auto">
       <form onSubmit={handleSubmit} noValidate className="space-y-5">
         <div className="text-center">
           <h2 className="text-secondary text-2xl font-semibold">Nyhedsbrev</h2>

@@ -34,7 +34,7 @@ function SpineLine() {
 export default function AlternatingTimeline({ items, className = "" }) {
   return (
     <div
-      className={`mx-auto flex w-full max-w-360 flex-col items-stretch px-8 ${className}`}
+      className={`mx-auto flex w-full max-w-360 flex-col items-stretch ${className}`}
     >
       {/* Top cap */}
       <div className="bg-dark mx-0 h-6 w-3 rounded-t sm:mx-auto" />

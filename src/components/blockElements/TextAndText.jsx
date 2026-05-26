@@ -23,7 +23,7 @@ export default function TextAndText({
 
   return (
     <section
-      className={`bg-light flex flex-col gap-8 rounded-4xl px-4 py-4 sm:gap-6 sm:px-6 sm:py-6 lg:grid lg:grid-cols-2 lg:items-start lg:gap-12 lg:px-2 lg:py-0 ${layoutOrder} ${className} items-center`}
+      className={`bg-light flex flex-col gap-8 rounded-4xl py-4 sm:gap-6 sm:py-6 lg:grid lg:grid-cols-2 lg:items-start lg:gap-12 lg:py-0 ${layoutOrder} ${className} items-center`}
     >
       {title ? (
         <h2 className="text-primary col-span-full text-center font-serif text-4xl leading-none font-medium sm:text-5xl">

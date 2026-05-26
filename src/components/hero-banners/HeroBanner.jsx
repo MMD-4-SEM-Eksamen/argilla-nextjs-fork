@@ -126,7 +126,11 @@ export default function HeroBanner({
           {buttonLabel && (
             <LinkBtn
               btnLink={buttonLink}
-              themeVariant={themeVariant}
+              themeVariant={
+                themeVariant === "tertiary" || themeVariant === "quaternary"
+                  ? "secondary"
+                  : themeVariant
+              }
               {...buttonConfig}
             >
               {buttonLabel}
@@ -154,7 +158,11 @@ export default function HeroBanner({
             {buttonLabel && (
               <LinkBtn
                 btnLink={buttonLink}
-                themeVariant={themeVariant}
+                themeVariant={
+                  themeVariant === "tertiary" || themeVariant === "quaternary"
+                    ? "secondary"
+                    : themeVariant
+                }
                 {...buttonConfig}
               >
                 {buttonLabel}
@@ -163,7 +171,13 @@ export default function HeroBanner({
           </div>
           <div className="aspect-square max-h-150 max-w-150 max-xl:hidden">
             <ImageWrapper
-              themeVariant={themeVariant}
+              themeVariant={
+                themeVariant === "tertiary"
+                  ? "secondary"
+                  : themeVariant === "quaternary"
+                    ? "primary"
+                    : themeVariant
+              }
               strokeStyle="bottomRight"
               {...foregroundImageConfig}
             />

@@ -18,26 +18,26 @@ export default function ActionBtn({
 }) {
   const size = {
     base:
-      "min-w-[128px] h-[36px] text-sm rounded-xl px-3 py-1.5 hover:border-b-3",
+      "min-w-[128px] h-[36px] text-sm rounded-xl px-3 py-1.5 hover:border-b-3 hover:border-r-3",
     medium:
-      "min-w-[176px] h-[44px] text-base rounded-2xl px-4 py-2 hover:border-b-[3.5px]",
+      "min-w-[176px] h-[44px] text-base rounded-2xl px-4 py-2 hover:border-b-[3.5px] hover:border-r-[3.5px]",
     large:
-      "min-w-[256px] h-[56px] text-lg rounded-3xl px-6 py-3 hover:border-b-4",
+      "min-w-[256px] h-[56px] text-lg rounded-3xl px-6 py-3 hover:border-b-4 hover:border-r-4",
   };
 
   const responsiveSize = {
     toMedium:
-      "md:min-w-[176px] md:h-[44px] md:text-base md:rounded-2xl md:px-4 md:py-2 md:hover:border-b-[3.5px]",
+      "md:min-w-[176px] md:h-[44px] md:text-base md:rounded-2xl md:px-4 md:py-2 md:hover:border-b-[3.5px] hover:border-r-[3.5px]",
     toLarge:
-      "md:min-w-[256px] md:h-[56px] md:text-lg md:rounded-3xl md:px-6 md:py-3 md:hover:border-b-4",
+      "md:min-w-[256px] md:h-[56px] md:text-lg md:rounded-3xl md:px-6 md:py-3 md:hover:border-b-4 hover:border-r-4",
   };
 
   const themeSwatch = {
-    primary: "bg-secondary text-primary",
-    secondary: "bg-primary text-secondary",
+    primary: "bg-secondary text-primary hover:border-b-dark hover:border-r-dark",
+    secondary: "bg-primary text-secondary hover:border-b-dark hover:border-r-dark",
   };
 
-  const btnStyling = `font-bold w-fit inline-flex place-items-center md:cursor-pointer font-display ${themeSwatch[themeVariant]} ${size[initSize]} ${btnClass} ${responsiveSize[bpSize]} transition-all duration-150 ease-in-out hover:border-b-dark`;
+  const btnStyling = `font-bold w-fit inline-flex place-items-center md:cursor-pointer font-display transition-all duration-150 ease-in-out ${themeSwatch[themeVariant]} ${size[initSize]} ${btnClass} ${responsiveSize[bpSize]}`;
   const spanText = `block overflow-hidden text-ellipsis text-nowrap w-full text-center`;
 
   return (

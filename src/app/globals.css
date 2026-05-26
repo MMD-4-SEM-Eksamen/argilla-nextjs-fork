@@ -96,7 +96,8 @@
 @theme inline {
   /* Sizing */
   --spacing-text-max: var(--max-w-text);
-  --spacing-content-max: var(--max-w-breakout);
+  --spacing-content-max: var(--max-w-desktop);
+  --spacing-breakout: var(--max-w-breakout);
   --spacing-mobile-inline: var(--mobile-pad-inline);
 
   /* Fonts */
@@ -179,7 +180,7 @@
 */
 
   main {
-    @apply  grid-cols-max auto-rows-min max-w-content-max grid min-h-full gap-y-28 *:col-start-2 *:col-end-auto *:last:mb-28 md:min-h-dvh;
+    @apply  grid-cols-max auto-rows-min max-w-breakout grid min-h-full gap-y-28 *:col-start-2 *:col-end-auto *:last:mb-28 md:min-h-dvh;
     
     /* Overriding all non-breakout elements padding-inline with the mobile pad.  
       - (grid-cols-max) has been updated to include the mobile-pad-inline on both ends.
