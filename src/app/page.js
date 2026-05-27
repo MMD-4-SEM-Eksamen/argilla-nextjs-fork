@@ -147,7 +147,7 @@ export default function Home() {
       />
 
       <div className="col-span-full">
-        <div className="bg-dark flex flex-col gap-12 py-24 md:gap-y-40">
+        <div className="bg-dark px-mobile-inline flex flex-col gap-12 py-24 md:gap-y-40">
           <ImageAndText
             imageSrc="/images/software2.webp"
             imageAlt="Abstrakt teknologi visualisering"

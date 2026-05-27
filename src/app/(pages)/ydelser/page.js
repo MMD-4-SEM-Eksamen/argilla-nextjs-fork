@@ -93,14 +93,14 @@ export default function Ydelser() {
         description="Valget af leveringsmodel afhænger af mange faktorer. Fra interne sikkerhedskrav og infrastruktur til ressourcer og skaleringsplaner. Vi hjælper jer gerne med at finde den løsning der giver mest mening for netop jeres organisation. Kontakt os for en uforpligtende snak, så finder vi ud af det sammen."
         reverseOrder
       />
-      <div className="bg-dark col-span-full py-20">
+      <div className="bg-dark px-mobile-inline col-span-full py-20">
         <SectionElem
           sectionHeading="Færdige moduler"
           sectionBodyText="Argilla leveres med en samling færdigbyggede systemmoduler der dækker de mest almindelige forretningsbehov. Brug dem som udgangspunkt og tilpas dem præcis til den måde jeres organisation arbejder på."
           centeredVariant={true}
           themeVariant="tertiary"
         >
-          <div className="md:px-mobile-inline grid max-w-360 grid-cols-1 gap-20 md:grid-cols-2 md:gap-30 lg:grid-cols-3">
+          <div className="grid max-w-360 grid-cols-1 gap-20 md:grid-cols-2 md:gap-30 lg:grid-cols-3">
             <IconCard
               themeVariant="secondary"
               initSize="fit"
