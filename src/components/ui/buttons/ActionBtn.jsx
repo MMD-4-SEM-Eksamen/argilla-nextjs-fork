@@ -1,3 +1,5 @@
+"use client";
+
 /* Use case: 
 // (handleBtnAction) - Used for applying onClick actions if needed.
 // (initSize) - Determines elements initial size: initSize = "base" / "large"
@@ -17,8 +19,7 @@ export default function ActionBtn({
   children,
 }) {
   const size = {
-    base:
-      "min-w-[128px] h-[36px] text-sm rounded-xl px-3 py-1.5 hover:border-b-3 hover:border-r-3",
+    base: "min-w-[128px] h-[36px] text-sm rounded-xl px-3 py-1.5 hover:border-b-3 hover:border-r-3",
     medium:
       "min-w-[176px] h-[44px] text-base rounded-2xl px-4 py-2 hover:border-b-[3.5px] hover:border-r-[3.5px]",
     large:
@@ -33,8 +34,10 @@ export default function ActionBtn({
   };
 
   const themeSwatch = {
-    primary: "bg-secondary text-primary hover:border-b-dark hover:border-r-dark",
-    secondary: "bg-primary text-secondary hover:border-b-dark hover:border-r-dark",
+    primary:
+      "bg-secondary text-primary hover:border-b-dark hover:border-r-dark",
+    secondary:
+      "bg-primary text-secondary hover:border-b-dark hover:border-r-dark",
   };
 
   const btnStyling = `font-bold w-fit inline-flex place-items-center md:cursor-pointer font-display transition-all duration-150 ease-in-out ${themeSwatch[themeVariant]} ${size[initSize]} ${btnClass} ${responsiveSize[bpSize]}`;

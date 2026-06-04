@@ -1,3 +1,5 @@
+"use client";
+
 /* Use Case:
 // (themeVariant) - Determines theme palette: themeVariant = "primary" / "secondary"
 // (initSize) - Determines card parent container sizing: initSize = "auto" / "full" / "fit"
@@ -52,7 +54,7 @@ export default function OfferCard({
   cardPrice,
   btnChild,
   cardFeaturesTitle = "",
-  bulletChild
+  bulletChild,
 }) {
   const size = {
     auto: "size-auto",
@@ -66,14 +68,14 @@ export default function OfferCard({
       bgAlt: "bg-secondary",
       heading: "text-secondary",
       text: "text-light",
-      icon: "fill-light"
+      icon: "fill-light",
     },
     secondary: {
       bg: "bg-secondary",
       bgAlt: "bg-primary",
       heading: "text-primary",
       text: "text-dark",
-      icon: "fill-dark"
+      icon: "fill-dark",
     },
   };
 
@@ -116,11 +118,14 @@ export default function OfferCard({
         </div>
       </div>
       <div className={`${theme.bgAlt} h-2 w-full`} />
-      <div className="grid gap-y-6 px-mobile-inline">
+      <div className="px-mobile-inline grid gap-y-6">
         <h3 className={`text-xl ${theme.heading}`}>{cardFeaturesTitle}</h3>
         {bulletChild.map((bullet) => (
-          <div className="flex gap-4 [&>svg]:mt-1 [&>svg]:shrink-0" key={bullet.label}>
-            <CaretRightIcon size={16} fill={theme.icon}/>
+          <div
+            className="flex gap-4 [&>svg]:mt-1 [&>svg]:shrink-0"
+            key={bullet.label}
+          >
+            <CaretRightIcon size={16} fill={theme.icon} />
             <span className={`${theme.text}`}>{bullet.label}</span>
           </div>
         ))}

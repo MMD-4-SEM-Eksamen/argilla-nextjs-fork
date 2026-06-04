@@ -36,6 +36,10 @@ export default function Ydelser() {
             props: {
               btnLink: "/koeb?type=self-hosted",
               initSize: "medium",
+              cartSelection: {
+                type: "self-hosted",
+                title: "Self-hosted",
+              },
             },
           }}
         />
@@ -59,6 +63,10 @@ export default function Ydelser() {
             props: {
               btnLink: "/koeb?type=cloud-saas",
               initSize: "medium",
+              cartSelection: {
+                type: "cloud-saas",
+                title: "Cloud SaaS",
+              },
             },
           }}
         />
@@ -82,6 +90,10 @@ export default function Ydelser() {
             props: {
               btnLink: "/koeb?type=application-management",
               initSize: "medium",
+              cartSelection: {
+                type: "application-management",
+                title: "Application Management",
+              },
             },
           }}
         />

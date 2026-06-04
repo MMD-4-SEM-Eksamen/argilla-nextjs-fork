@@ -1,68 +1,24 @@
 import BulletpointTitle from "@/components/bulletpoints/BulletpointTitle";
 import Accordion from "@/components/accordion/Accordion";
 import PurchaseForm from "@/components/forms/PurchaseForm";
-import OfferCard from "@/components/cards/OfferCard";
-import { GlobeIcon } from "@phosphor-icons/react/dist/ssr";
-
-const offers = {
-  "self-hosted": {
-    title: "Self-hosted",
-    text: "Fuld kontrol på egne servere",
-    price: "Fra 12.345 DKK",
-    label1: "Licens til Argilla-platformen",
-    label2: "Installationsvejledning og onboarding",
-    label3: "Adgang til opdateringer og nye versioner",
-    label4: "Support via mail og telefon",
-  },
-  "cloud-saas": {
-    title: "Cloud SaaS",
-    text: "Argilla driftet og vedligeholdt fra vores eget datacenter. I fokuserer på forretningen, vi tager os af resten.",
-    price: "Fra 12.345 DKK",
-    label1: "Fuldt driftet og overvåget miljø",
-    label2: "Automatiske opdateringer og backup",
-    label3: "Skaleres efter jeres behov",
-    label4: "Dedikeret support og SLA-aftale",
-  },
-  "application-management": {
-    title: "Application Management",
-    text: "Vi installerer, drifter og vedligeholder Argilla direkte på jeres egne private servere. I beholder dataejerskabet, vi tager driftsansvaret.",
-    price: "Fra 12.345 DKK",
-    label1: "Hosting på kundens egen infrastruktur",
-    label2: "Løbende vedligehold og opdateringer",
-    label3: "Overvågning og proaktiv fejlhåndtering",
-    label4: "Fuld compliance med interne sikkerhedspolitikker",
-  },
-};
+import OfferDropdown from "@/components/cart/OfferDropdown";
+import SelectedOfferCard from "@/components/cart/SelectedOfferCard";
 
 export const dynamic = "force-dynamic";
 
 export default async function Koeb({ searchParams }) {
   const resolvedSearchParams = await searchParams;
   const selectedType = resolvedSearchParams?.type;
-  const selectedOffer = offers[selectedType] || offers["self-hosted"];
 
   return (
     <main>
       <h1 className="text-primary mt-20 text-center font-serif text-5xl">
         Køb
       </h1>
+      <OfferDropdown initialType={selectedType} />
       <div className="mx-mobile-inline grid grid-cols-1 gap-20 md:grid-cols-2 md:gap-4">
         <div className="flex justify-center md:sticky md:top-20 md:order-2 md:max-w-md md:self-start md:justify-self-end">
-          <OfferCard
-            themeVariant="primary"
-            initSize="fit"
-            iconChild={<GlobeIcon />}
-            cardTitle={selectedOffer.title}
-            cardText={selectedOffer.text}
-            cardPrice={selectedOffer.price}
-            cardFeaturesTitle="Hvad er inkluderet:"
-            bulletChild={[
-              { label: selectedOffer.label1 },
-              { label: selectedOffer.label2 },
-              { label: selectedOffer.label3 },
-              { label: selectedOffer.label4 },
-            ]}
-          />
+          <SelectedOfferCard initialType={selectedType} />
         </div>
         <div>
           <h2 className="text-primary mb-4 font-serif text-4xl font-bold">
