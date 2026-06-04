@@ -19,8 +19,9 @@
 //imagePriority - Boolean to set the priority attribute for the Next.js Image component.
 */
 
-import Image from "next/image";
 import Link from "next/link";
+import IconWrapper from "../ui/icon-wrapper/IconWrapper";
+import ImageWrapper from "../ui/image-wrapper/ImageWrapper";
 import {
   EnvelopeSimpleIcon,
   GithubLogoIcon,
@@ -75,13 +76,13 @@ export default function ImageAndText({
         <div
           className={`${variant === "primary" ? "border-primary/95" : "border-secondary/95"} bg-primary relative aspect-4/3 w-full overflow-hidden rounded-3xl border-b-6 ${reverseOrder ? "border-r-6" : "border-l-6"} shadow-[0_10px_30px_rgba(128,49,37,0.14)]`}
         >
-          <Image
-            src={imageSrc}
-            alt={imageAlt || title || "Image"}
+          <ImageWrapper
+            imgSrc={imageSrc}
+            imgAlt={imageAlt || title || "Image"}
             fill
             priority={imagePriority}
-            className="object-cover"
             sizes="(min-width: 1024px) 50vw, 100vw"
+            imgStyle="object-cover"
           />
         </div>
       </div>
@@ -101,7 +102,9 @@ export default function ImageAndText({
                   rel="noreferrer"
                   className="hover:text-dark inline-flex items-center justify-center rounded-full transition"
                 >
-                  <Icon size={18} weight="regular" />
+                  <IconWrapper initSize="xs" useBackground={false}>
+                    <Icon size={18} weight="regular" />
+                  </IconWrapper>
                 </Link>
               ))}
             </div>
@@ -111,14 +114,18 @@ export default function ImageAndText({
                 href={`tel:${contactPhone.replace(/[^+\d]/g, "")}`}
                 className="hover:text-dark inline-flex items-center gap-2 transition"
               >
-                <PhoneIcon size={16} />
+                <IconWrapper initSize="xs" useBackground={false}>
+                  <PhoneIcon size={16} />
+                </IconWrapper>
                 <span>{contactPhone}</span>
               </a>
               <a
                 href={`mailto:${contactEmail}`}
                 className="hover:text-dark inline-flex items-center gap-2 transition"
               >
-                <EnvelopeSimpleIcon size={16} />
+                <IconWrapper initSize="xs" useBackground={false}>
+                  <EnvelopeSimpleIcon size={16} />
+                </IconWrapper>
                 <span>{contactEmail}</span>
               </a>
             </div>

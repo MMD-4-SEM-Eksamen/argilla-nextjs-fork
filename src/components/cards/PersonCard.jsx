@@ -69,7 +69,7 @@
 />;
 */
 
-import Image from "next/image";
+import ImageWrapper from "../ui/image-wrapper/ImageWrapper";
 import TagElem from "../ui/tag/TagElem";
 import SocialsIcon from "../ui/socials-icon/SocialsIcon";
 import ActionBtn from "../ui/buttons/ActionBtn";
@@ -88,7 +88,7 @@ export default function PersonCard({
   cardText = "",
   tagChild,
   contactIcon,
-  btnChild
+  btnChild,
 }) {
   const size = {
     auto: "size-auto",
@@ -99,11 +99,11 @@ export default function PersonCard({
   const themeSwatch = {
     primary: {
       heading: "text-primary",
-      text: "text-dark"
+      text: "text-dark",
     },
     secondary: {
       heading: "text-dark",
-      text: "text-primary"
+      text: "text-primary",
     },
   };
 
@@ -113,12 +113,12 @@ export default function PersonCard({
     <article
       className={`px-mobile-inline grid auto-rows-min items-start justify-items-center gap-y-8 py-7 ${size[initSize]} ${theme.bg} ${cardStyle}`}
     >
-      <Image
-        src={imgSrc || "/images/test-image.jpg"}
-        alt={imgAlt || "placeholder image"}
-        width={imgWidth || 320}
-        height={imgHeight || 240}
-        className={`aspect-square w-full rounded-full ${imgStyle}`}
+      <ImageWrapper
+        imgSrc={imgSrc}
+        imgAlt={imgAlt}
+        imgWidth={imgWidth}
+        imgHeight={imgHeight}
+        imgStyle={`aspect-square w-full rounded-full ${imgStyle}`}
       />
       <div className="px-mobile-inline grid gap-y-6">
         {tagChild && tagChild.length > 0 ? (
@@ -150,17 +150,17 @@ export default function PersonCard({
           </div>
         ) : null}
         {btnChild && btnChild.type === "ActionBtn" && (
-          <div className="w-full flex justify-center">
-          <ActionBtn themeVariant={themeVariant} {...btnChild.props}>
-            {btnChild.label}
-          </ActionBtn>
+          <div className="flex w-full justify-center">
+            <ActionBtn themeVariant={themeVariant} {...btnChild.props}>
+              {btnChild.label}
+            </ActionBtn>
           </div>
         )}
         {btnChild && btnChild.type === "LinkBtn" && (
-          <div className="w-full flex justify-center">
-          <LinkBtn themeVariant={themeVariant} {...btnChild.props}>
-            {btnChild.label}
-          </LinkBtn>
+          <div className="flex w-full justify-center">
+            <LinkBtn themeVariant={themeVariant} {...btnChild.props}>
+              {btnChild.label}
+            </LinkBtn>
           </div>
         )}
       </div>

@@ -17,6 +17,7 @@
 import { useState, useRef, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { CaretDownIcon } from "@phosphor-icons/react";
+import IconWrapper from "../icon-wrapper/IconWrapper";
 
 export default function FilterElem({
   children,
@@ -39,7 +40,7 @@ export default function FilterElem({
   // If any clicks are happening outside the dropdown container, will close it.
   // UseEffect = Action (effect) that runs, in this case, once on mount (, []) , when comp first appears.
   // handleActionOutside = If interactivity falls outside the dropdownRef, will close menu.
-  // Adds event listener on mount, then removes it when the component unmounts. 
+  // Adds event listener on mount, then removes it when the component unmounts.
   useEffect(() => {
     const handleActionOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
@@ -47,7 +48,8 @@ export default function FilterElem({
       }
     };
     document.addEventListener("pointerdown", handleActionOutside);
-    return () => document.removeEventListener("pointerdown", handleActionOutside);
+    return () =>
+      document.removeEventListener("pointerdown", handleActionOutside);
   }, []);
 
   // Handler for pushing a text string into the URL, used for sorting.
@@ -61,32 +63,43 @@ export default function FilterElem({
   };
 
   return (
-    <div className="pointer-events-none text-primary grid md:flex md:items-center px-mobile-inline md:px-0 gap-6 text-lg font-bold md:text-xl">
+    <div className="text-primary px-mobile-inline pointer-events-none grid gap-6 text-lg font-bold md:flex md:items-center md:px-0 md:text-xl">
       <label htmlFor={filterId} className={`${labelStyling}`}>
         {children}
       </label>
-      <div className="relative inline-block pointer-events-auto" ref={dropdownRef}>
+      <div
+        className="pointer-events-auto relative inline-block"
+        ref={dropdownRef}
+      >
         {/* Dropdown Btn */}
         <button
           id={filterId}
           onClick={() => setIsOpen(!isOpen)}
-          className={`${selectStyling} md:cursor-pointer flex text-text-dark items-center gap-3 rounded-lg border-[3px] border-primary py-2 px-3`}
+          className={`${selectStyling} text-text-dark border-primary flex items-center gap-3 rounded-lg border-[3px] px-3 py-2 md:cursor-pointer`}
         >
           {validFilter}
-          <CaretDownIcon
-            size={24}
-            color="var(--primary-col)"
-            className={`transition-transform duration-300 ease-in-out ${isOpen ? "rotate-180" : ""}`}
-          />
+          <IconWrapper
+            initSize="xs"
+            useBackground={false}
+            themeVariant="secondary"
+          >
+            <CaretDownIcon
+              size={24}
+              color="var(--primary-col)"
+              className={`transition-transform duration-300 ease-in-out ${isOpen ? "rotate-180" : ""}`}
+            />
+          </IconWrapper>
         </button>
         {/* Dropdown Menu */}
         {isOpen && (
-          <div className={`${dropdownStyling} absolute top-full left-0 mt-1 w-max z-20 rounded-lg border-[3px] border-primary [&>*+*]:mt-2`}>
+          <div
+            className={`${dropdownStyling} border-primary absolute top-full left-0 z-20 mt-1 w-max rounded-lg border-[3px] [&>*+*]:mt-2`}
+          >
             {options.map((opt) => (
               <button
                 key={opt}
                 onClick={() => handleChange(opt)}
-                 className={`md:cursor-pointer block w-full text-left px-3 py-2 hover:text-text-dark ${
+                className={`hover:text-text-dark block w-full px-3 py-2 text-left md:cursor-pointer ${
                   opt === validFilter ? "text-text-dark" : ""
                 }`}
               >
