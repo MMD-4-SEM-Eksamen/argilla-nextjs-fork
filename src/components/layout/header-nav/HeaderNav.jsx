@@ -3,11 +3,12 @@
 import Link from "next/link";
 import { useState } from "react";
 // PhosphorIcons Imports
-import { ListIcon, ShoppingCartSimpleIcon, XIcon } from "@phosphor-icons/react";
+import { ListIcon, XIcon } from "@phosphor-icons/react";
 // Component Import
 import LogoFull from "@/components/ui/logo/LogoFull";
 import LinkBtn from "@/components/ui/buttons/LinkBtn";
 import LangSwitcher from "./LangSwitcher";
+import ShoppingCartButton from "@/components/ui/shoppingCartButton/ShoppingCartButton";
 
 export default function HeaderNav({ themeVariant = "primary" }) {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
@@ -64,12 +65,10 @@ export default function HeaderNav({ themeVariant = "primary" }) {
           <div className="col-start-3 flex w-full items-center justify-end gap-2.5 justify-self-end pl-2.5 max-lg:hidden">
             <LangSwitcher themeVariant={themeVariant} />
             <div className="flex items-center gap-6 px-4">
-              <LinkBtn btnLink="/koeb" themeVariant={themeVariant}>
+              <LinkBtn btnLink="/ydelser" themeVariant={themeVariant}>
                 Bestil
               </LinkBtn>
-              <Link href="/koeb">
-                <ShoppingCartSimpleIcon size={32} className={`${theme.icon}`} />
-              </Link>
+              <ShoppingCartButton />
             </div>
           </div>
           <div className="flex gap-5 lg:hidden">
@@ -97,9 +96,9 @@ export default function HeaderNav({ themeVariant = "primary" }) {
             <ul
               className={`grid w-full place-content-center gap-6 text-center [&>li>a]:text-lg`}
             >
-            <li className={`${theme.text}`}>
-              <Link href="/">Hjem</Link>
-            </li>
+              <li className={`${theme.text}`}>
+                <Link href="/">Hjem</Link>
+              </li>
               <li className={`${theme.text}`}>
                 <Link href="/ydelser">Ydelser</Link>
               </li>
@@ -113,23 +112,22 @@ export default function HeaderNav({ themeVariant = "primary" }) {
                 <Link href="/kontakt">Kontakt</Link>
               </li>
             </ul>
-              <div className="relative inline-block">
-                <LinkBtn
-                  btnLink="/koeb"
-                  themeVariant={themeVariant}
-                  btnClass="mx-auto"
-                  initSize="medium"
-                >
-                  Bestil
-                </LinkBtn>
-                <Link href="/koeb" className="absolute right-0 pl-8 translate-x-full translate-y-1/4">
-                  <ShoppingCartSimpleIcon
-                    size={32}
-                    className={`${theme.icon}`}
-                  />
-                </Link>
-              </div>
-              <LangSwitcher themeVariant={themeVariant} />
+            <div className="relative inline-block">
+              <LinkBtn
+                btnLink="/koeb"
+                themeVariant={themeVariant}
+                btnClass="mx-auto"
+                initSize="medium"
+              >
+                Bestil
+              </LinkBtn>
+              <ShoppingCartButton
+                themeVariant="secondary"
+                compact
+                className="absolute translate-y-1/4 pl-8"
+              />
+            </div>
+            <LangSwitcher themeVariant={themeVariant} />
           </nav>
         )}
       </div>

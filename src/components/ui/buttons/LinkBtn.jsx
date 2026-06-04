@@ -1,3 +1,5 @@
+"use client";
+
 /* Use case: 
 // (handleBtnAction) - Used for applying onClick actions if needed.
 // (btnLink) - Link for the 'href = "" ' of the <link> parent container: btnLink = "/page"
@@ -8,6 +10,7 @@
 */
 
 import Link from "next/link";
+import { useCart } from "@/context/cart-context/CartProvider";
 
 export default function LinkBtn({
   handleBtnAction,
@@ -16,18 +19,20 @@ export default function LinkBtn({
   bpSize,
   themeVariant = "primary",
   btnClass = "",
+  cartSelection,
   children,
 }) {
+  const { rememberSelection } = useCart();
+
   const size = {
-    base:
-      "min-w-[128px] h-[36px] text-sm rounded-xl px-3 py-1.5 hover:border-b-3 hover:border-r-3",
+    base: "min-w-[128px] h-[36px] text-sm rounded-xl px-3 py-1.5 hover:border-b-3 hover:border-r-3",
     medium:
       "min-w-[176px] h-[44px] text-base rounded-2xl px-4 py-2 hover:border-b-[3.5px] hover:border-r-[3.5px]",
     large:
       "min-w-[256px] h-[56px] text-lg rounded-3xl px-6 py-3 hover:border-b-4 hover:border-r-4",
   };
 
-    const responsiveSize = {
+  const responsiveSize = {
     toMedium:
       "md:min-w-[176px] md:h-[44px] md:text-base md:rounded-2xl md:px-4 md:py-2 md:hover:border-b-[3.5px] md:hover:border-r-[3.5px]",
     toLarge:
@@ -44,12 +49,21 @@ export default function LinkBtn({
   const btnStyling = `font-bold w-fit inline-flex place-items-center md:cursor-pointer font-display transition-all duration-150 ease-in-out  ${themeSwatch[themeVariant]} ${size[initSize]} ${btnClass} ${responsiveSize[bpSize]} `;
   const spanText = ` block overflow-hidden text-ellipsis text-nowrap w-full text-center`;
 
+  const handleClick = (event) => {
+    if (cartSelection?.type) {
+      rememberSelection({
+        type: cartSelection.type,
+        title: cartSelection.title || cartSelection.type,
+      });
+    }
+
+    if (handleBtnAction) {
+      handleBtnAction(event);
+    }
+  };
+
   return (
-    <Link
-      href={btnLink}
-      onClick={handleBtnAction}
-      className={btnStyling}
-    >
+    <Link href={btnLink} onClick={handleClick} className={btnStyling}>
       <span className={`${spanText}`}>{children}</span>
     </Link>
   );
