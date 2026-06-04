@@ -11,6 +11,7 @@
 
 import { useState } from "react";
 import { CaretDownIcon } from "@phosphor-icons/react";
+import IconWrapper from "../ui/icon-wrapper/IconWrapper";
 import Pagination from "../ui/pagination/Pagination";
 
 // ─── Slider ───────────────────────────────────────────────────────────────────
@@ -55,11 +56,17 @@ function AccordionRow({ item }) {
           {item.title}
         </span>
         <span className="shrink-0 opacity-85">
-          {open ? (
-            <CaretDownIcon className="transition-all" />
-          ) : (
-            <CaretDownIcon className="-rotate-90 transition-all" />
-          )}
+          <IconWrapper
+            initSize="xs"
+            useBackground={false}
+            themeVariant="secondary"
+          >
+            {open ? (
+              <CaretDownIcon className="transition-all" />
+            ) : (
+              <CaretDownIcon className="-rotate-90 transition-all" />
+            )}
+          </IconWrapper>
         </span>
       </button>
 

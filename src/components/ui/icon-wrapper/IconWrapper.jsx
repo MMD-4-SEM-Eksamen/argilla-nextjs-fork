@@ -14,13 +14,20 @@ export default function IconWrapper({
   elemStyle = "",
   initSize = "base",
   bpSize = "",
+  useBackground = true,
 }) {
-  const themeSwatch = {
-    primary: "bg-secondary *:fill-primary *:text-primary",
-    secondary: "bg-primary *:fill-secondary *:text-secondary",
-  };
+  const themeSwatch = useBackground
+    ? {
+        primary: "bg-secondary *:fill-primary *:text-primary",
+        secondary: "bg-primary *:fill-secondary *:text-secondary",
+      }
+    : {
+        primary: "*:fill-primary *:text-primary",
+        secondary: "*:fill-secondary *:text-secondary",
+      };
 
   const size = {
+    xs: "min-w-[32px] min-h-[32px] *:m-1 text-xl",
     small: "min-w-[48px] min-h-[48px] *:m-3 text-2xl",
     base: "min-w-[60px] min-h-[60px] *:m-3 text-3xl",
     medium: "min-w-[72px] min-h-[72px] *:m-3 text-4xl",
@@ -34,10 +41,13 @@ export default function IconWrapper({
   };
 
   const spanText = `[&>:not(svg)]:overflow-hidden`;
+  const containerStyle = useBackground
+    ? "grid aspect-square w-fit place-items-center rounded-full *:aspect-square"
+    : "grid w-fit place-items-center";
 
   return (
     <div
-      className={`grid aspect-square w-fit place-items-center rounded-full *:aspect-square ${elemStyle} ${spanText} ${themeSwatch[themeVariant]} ${size[initSize]} ${responsiveSize[bpSize]}`}
+      className={`${containerStyle} ${elemStyle} ${spanText} ${themeSwatch[themeVariant]} ${size[initSize]} ${responsiveSize[bpSize]}`}
     >
       {children}
     </div>

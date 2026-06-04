@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 // PhosphorIcons Imports
 import { ListIcon, XIcon } from "@phosphor-icons/react";
+import IconWrapper from "@/components/ui/icon-wrapper/IconWrapper";
 // Component Import
 import LogoFull from "@/components/ui/logo/LogoFull";
 import LinkBtn from "@/components/ui/buttons/LinkBtn";
@@ -80,11 +81,19 @@ export default function HeaderNav({ themeVariant = "primary" }) {
               aria-label={isMobileOpen ? "Luk menu" : "Åben menu"}
               className="lg:hidden"
             >
-              {isMobileOpen ? (
-                <XIcon size={32} className={`${theme.icon}`} />
-              ) : (
-                <ListIcon size={32} className={`${theme.icon}`} />
-              )}
+              <IconWrapper
+                themeVariant={
+                  themeVariant === "primary" ? "secondary" : "primary"
+                }
+                initSize="xs"
+                useBackground={false}
+              >
+                {isMobileOpen ? (
+                  <XIcon size={32} className={`${theme.icon}`} />
+                ) : (
+                  <ListIcon size={32} className={`${theme.icon}`} />
+                )}
+              </IconWrapper>
             </button>
           </div>
         </nav>

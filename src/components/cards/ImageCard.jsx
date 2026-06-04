@@ -49,7 +49,7 @@
 />;
 */
 
-import Image from "next/image";
+import ImageWrapper from "../ui/image-wrapper/ImageWrapper";
 import TagElem from "../ui/tag/TagElem";
 import ActionBtn from "../ui/buttons/ActionBtn";
 import LinkBtn from "../ui/buttons/LinkBtn";
@@ -99,16 +99,16 @@ export default function ImageCard({
   const theme = themeSwatch[themeVariant] || themeSwatch.primary;
   return (
     <article
-      className={`grid auto-rows-min items-start justify-items-center gap-y-6 pb-7 rounded-xl ${size[initSize]} ${theme.bg} ${cardStyle}`}
+      className={`grid auto-rows-min items-start justify-items-center gap-y-6 rounded-xl pb-7 ${size[initSize]} ${theme.bg} ${cardStyle}`}
     >
-      <Image
-        src={imgSrc || "/images/test-image.jpg"}
-        alt={imgAlt || "placeholder image"}
-        width={imgWidth || 320}
-        height={imgHeight || 240}
-        className={`rounded-t-xl ${imgStyle} ${imageSize[imgSize]}`}
+      <ImageWrapper
+        imgSrc={imgSrc}
+        imgAlt={imgAlt}
+        imgWidth={imgWidth}
+        imgHeight={imgHeight}
+        imgStyle={`rounded-t-xl ${imgStyle} ${imageSize[imgSize]}`}
       />
-      <div className="px-mobile-inline grid gap-y-6 justify-items-center">
+      <div className="px-mobile-inline grid justify-items-center gap-y-6">
         <div className="grid gap-y-4">
           <h3 className={`text-2xl ${theme.heading}`}>{cardTitle}</h3>
           {tagChild && tagChild.length > 0 ? (

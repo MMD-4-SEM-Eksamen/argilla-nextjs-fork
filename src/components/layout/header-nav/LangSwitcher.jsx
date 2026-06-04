@@ -2,17 +2,14 @@
 import { useState, useRef, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useLanguage } from "@/context/lang-context/useLanguage";
-import {
-  CaretDownIcon,
-  PlanetIcon
-} from "@phosphor-icons/react";
+import IconWrapper from "@/components/ui/icon-wrapper/IconWrapper";
+import { CaretDownIcon, PlanetIcon } from "@phosphor-icons/react";
 
-function LangSwitcherContent ({ themeVariant = "primary" }) {
+function LangSwitcherContent({ themeVariant = "primary" }) {
   const { language, setLanguage } = useLanguage();
   const [isLangOpen, setIsLangOpen] = useState(false);
   const router = useRouter();
   const searchParams = useSearchParams();
-  
 
   // Should correspond to actual html lang="" attr
   // Link: https://www.w3schools.com/tags/ref_language_codes.asp
@@ -26,7 +23,7 @@ function LangSwitcherContent ({ themeVariant = "primary" }) {
       text: "text-secondary group-hover:text-dark",
       textAlt: "text-primary hover:text-dark",
       icon: "fill-secondary group-hover:fill-dark",
-      border: "border-secondary hover:border-dark"
+      border: "border-secondary hover:border-dark",
     },
     secondary: {
       bg: "bg-primary",
@@ -41,7 +38,7 @@ function LangSwitcherContent ({ themeVariant = "primary" }) {
 
   const handleLanguageChange = (lang) => {
     setLanguage(lang);
-    
+
     // Only add language param if it's not the default
     if (lang !== "da") {
       const params = new URLSearchParams(searchParams);
@@ -67,23 +64,38 @@ function LangSwitcherContent ({ themeVariant = "primary" }) {
   }, []);
 
   return (
-    <div className="lg:mx-auto relative inline-block max-lg:mt-3" ref={langDropdown}>
+    <div
+      className="relative inline-block max-lg:mt-3 lg:mx-auto"
+      ref={langDropdown}
+    >
       <button
         type="button"
         onClick={() => setIsLangOpen(!isLangOpen)}
         className={`group flex gap-5 rounded-xl border-3 px-3 py-1 ${theme.border}`}
       >
-        <PlanetIcon size={32} className={`${theme.icon}`} />
+        <IconWrapper
+          themeVariant={themeVariant === "primary" ? "secondary" : "primary"}
+          initSize="xs"
+          useBackground={false}
+        >
+          <PlanetIcon size={32} className={`${theme.icon}`} />
+        </IconWrapper>
         <div className="flex items-center gap-3">
-          <span className={`text-lg md:text-xl uppercase ${theme.text}`}>
+          <span className={`text-lg uppercase md:text-xl ${theme.text}`}>
             {language}
           </span>
-          <CaretDownIcon
-            size={16}
-            className={`${theme.icon} transition-transform duration-300 ease-in-out ${
-              isLangOpen ? "rotate-180" : ""
-            }`}
-          />
+          <IconWrapper
+            themeVariant={themeVariant === "primary" ? "secondary" : "primary"}
+            initSize="xs"
+            useBackground={false}
+          >
+            <CaretDownIcon
+              size={16}
+              className={`${theme.icon} transition-transform duration-300 ease-in-out ${
+                isLangOpen ? "rotate-180" : ""
+              }`}
+            />
+          </IconWrapper>
         </div>
       </button>
       {isLangOpen && (
@@ -96,7 +108,7 @@ function LangSwitcherContent ({ themeVariant = "primary" }) {
               onClick={() => {
                 handleLanguageChange(lang);
               }}
-              className={`block w-full px-3 py-2 text-center uppercase text-lg md:cursor-pointer md:text-xl ${theme.textAlt}`}
+              className={`block w-full px-3 py-2 text-center text-lg uppercase md:cursor-pointer md:text-xl ${theme.textAlt}`}
             >
               {lang}
             </li>
@@ -114,4 +126,3 @@ export default function LangSwitcher(props) {
     </Suspense>
   );
 }
-

@@ -22,8 +22,10 @@ export default function ImageWrapper({
   imgWidth,
   imgHeight,
   imgAlt,
+  fill = false,
+  priority = false,
+  sizes,
 }) {
-
   const strokeSwatch = {
     primary: {
       bottom: "border-b-8 border-primary",
@@ -34,27 +36,34 @@ export default function ImageWrapper({
       bottom: "border-b-8 border-secondary",
       bottomRight: "border-b-8 border-r-8 border-secondary",
       bottomLeft: "border-b-8 border-l-8 border-secondary",
-    }
-  }
+    },
+  };
 
-  const theme = strokeSwatch[themeVariant]?.[strokeStyle];
+  const theme = strokeSwatch[themeVariant]?.[strokeStyle] || "";
 
   const roundingPresets = {
     base: "rounded-xl",
-    medium: "rounded-2xl"
-  }
+    medium: "rounded-2xl",
+  };
 
   const roundingBp = {
-    toMedium: "md:rounded-2xl"
-  }
+    toMedium: "md:rounded-2xl",
+  };
+
+  const roundingClass = roundingPresets[roundingVariant] || "";
+  const responsiveRoundingClass = roundingBp[bpRounding] || "";
+  const imageClassName = `object-cover w-full h-full ${imgStyle || ""} ${theme} ${roundingClass} ${responsiveRoundingClass}`;
 
   return (
-    <Image 
+    <Image
       src={imgSrc || "/images/test-image.jpg"}
       alt={imgAlt || "placeholder image"}
-      width={imgWidth || 320}
-      height={imgHeight || 240}
-      className={`object-cover w-full h-full ${imgStyle} ${theme} ${roundingPresets[roundingVariant]} ${roundingBp[bpRounding]}`}
-      />
-  )
+      {...(fill
+        ? { fill: true }
+        : { width: imgWidth || 320, height: imgHeight || 240 })}
+      priority={priority}
+      sizes={sizes}
+      className={imageClassName}
+    />
+  );
 }

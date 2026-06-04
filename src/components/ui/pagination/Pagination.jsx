@@ -1,6 +1,7 @@
 "use client";
 import { CaretRightIcon } from "@phosphor-icons/react";
 import { CaretLeftIcon } from "@phosphor-icons/react";
+import IconWrapper from "../icon-wrapper/IconWrapper";
 
 const Pagination = ({ page, total, setPage }) => {
   return (
@@ -11,7 +12,9 @@ const Pagination = ({ page, total, setPage }) => {
         aria-label="Forrige"
         className="text-primary hover:bg-dark/10 flex h-8 w-8 items-center justify-center rounded-full transition-colors duration-150 disabled:cursor-default disabled:opacity-30"
       >
-        <CaretLeftIcon />
+        <IconWrapper initSize="xs" useBackground={false} themeVariant="primary">
+          <CaretLeftIcon />
+        </IconWrapper>
       </button>
 
       <span className="text-dark min-w-10 text-center font-sans text-sm font-semibold tracking-wide">
@@ -24,7 +27,9 @@ const Pagination = ({ page, total, setPage }) => {
         aria-label="Næste"
         className="text-primary hover:bg-dark/10 flex h-8 w-8 items-center justify-center rounded-full transition-colors duration-150 disabled:cursor-default disabled:opacity-30"
       >
-        <CaretRightIcon />
+        <IconWrapper initSize="xs" useBackground={false} themeVariant="primary">
+          <CaretRightIcon />
+        </IconWrapper>
       </button>
     </div>
   );
