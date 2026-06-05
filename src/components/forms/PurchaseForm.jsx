@@ -105,6 +105,9 @@ export default function PurchaseForm() {
       noValidate
       className="bg-light w-full py-3 md:py-4"
     >
+      <p className="text-dark mb-6 max-w-prose font-sans">
+        Felter med <span className="text-primary">*</span> er påkrævet.
+      </p>
       <div className="space-y-6">
         <div>
           <label

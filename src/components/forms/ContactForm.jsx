@@ -122,6 +122,9 @@ export default function ContactForm() {
         samarbejde? Udfyld formularen nedenfor, så vender vi tilbage hurtigst
         muligt.
       </p>
+      <p className="text-dark mb-6 max-w-prose font-sans">
+        Felter med <span className="text-primary">*</span> er påkrævet.
+      </p>
       <div className="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-2">
         <div>
           <label
