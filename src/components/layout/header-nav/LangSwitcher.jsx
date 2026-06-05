@@ -50,17 +50,29 @@ export default function LangSwitcher({ themeVariant = "primary" }) {
         onClick={() => setIsLangOpen(!isLangOpen)}
         className={`group flex gap-5 rounded-xl border-3 px-3 py-1 ${theme.border}`}
       >
-        <PlanetIcon size={32} className={`${theme.icon}`} />
+        <IconWrapper
+          themeVariant={themeVariant === "primary" ? "secondary" : "primary"}
+          initSize="xs"
+          useBackground={false}
+        >
+          <PlanetIcon size={32} className={`${theme.icon}`} />
+        </IconWrapper>
         <div className="flex items-center gap-3">
-          <span suppressHydrationWarning className={`text-lg uppercase md:text-xl ${theme.text}`}>
+          <span className={`text-lg uppercase md:text-xl ${theme.text}`}>
             {language}
           </span>
-          <CaretDownIcon
-            size={16}
-            className={`${theme.icon} transition-transform duration-300 ease-in-out ${
-              isLangOpen ? "rotate-180" : ""
-            }`}
-          />
+          <IconWrapper
+            themeVariant={themeVariant === "primary" ? "secondary" : "primary"}
+            initSize="xs"
+            useBackground={false}
+          >
+            <CaretDownIcon
+              size={16}
+              className={`${theme.icon} transition-transform duration-300 ease-in-out ${
+                isLangOpen ? "rotate-180" : ""
+              }`}
+            />
+          </IconWrapper>
         </div>
       </button>
       {isLangOpen && (

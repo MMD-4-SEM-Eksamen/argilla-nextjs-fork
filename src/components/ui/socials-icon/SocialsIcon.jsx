@@ -5,7 +5,14 @@
 */
 
 import Link from "next/link";
-import { PhoneIcon, EnvelopeSimpleIcon, LinkedinLogoIcon, GithubLogoIcon, GitlabLogoSimpleIcon } from "@phosphor-icons/react/dist/ssr";
+import {
+  PhoneIcon,
+  EnvelopeSimpleIcon,
+  LinkedinLogoIcon,
+  GithubLogoIcon,
+  GitlabLogoSimpleIcon,
+} from "@phosphor-icons/react/dist/ssr";
+import IconWrapper from "../icon-wrapper/IconWrapper";
 
 export default function SocialsIcon({
   type,
@@ -14,7 +21,6 @@ export default function SocialsIcon({
   iconSize,
   ...props
 }) {
-
   const socialIcons = {
     phone: PhoneIcon,
     email: EnvelopeSimpleIcon,
@@ -40,6 +46,7 @@ export default function SocialsIcon({
   return (
     <Link href={href} className={`${themeSwatch[themeVariant]} md:cursor-pointer`} {...props}>
         <IconComponent size={iconSize || 24} />
+      </IconWrapper>
     </Link>
   );
 }

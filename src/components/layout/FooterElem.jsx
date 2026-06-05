@@ -3,6 +3,7 @@
 import Link from "next/link";
 import LogoFull from "@/components/ui/logo/LogoFull";
 import Newsletter from "@/components/newsletter/Newsletter";
+import IconWrapper from "@/components/ui/icon-wrapper/IconWrapper";
 // Icon Imports
 import {
   LinkedinLogoIcon,
@@ -33,9 +34,9 @@ export default function FooterElem({ themeVariant = "primary" }) {
   return (
     <footer>
       <div
-        className={`${theme.bg} max-w-breakout ${theme.text} grid px-mobile-inline`}
+        className={`${theme.bg} max-w-breakout ${theme.text} px-mobile-inline grid`}
       >
-        <div className="max-w-content-max px-mobile-inline grid gap-y-24 py-11 md:px-11 place-self-center w-full">
+        <div className="max-w-content-max px-mobile-inline grid w-full gap-y-24 place-self-center py-11 md:px-11">
           <div className="grid gap-8 md:flex md:flex-wrap md:justify-between md:gap-12 [&_a,&_p]:text-lg [&_h2]:mb-4 [&_h2]:text-xl [&_h2]:font-bold [&_li:not(:last-child)]:mb-2">
             <LogoFull
               logoLink="/"
@@ -81,19 +82,46 @@ export default function FooterElem({ themeVariant = "primary" }) {
               <ul className="grid [&_a]:flex [&_a]:items-center [&_a]:gap-x-2">
                 <li>
                   <Link href="/" className={`${theme.textHover}`}>
-                    <LinkedinLogoIcon size={24} />
+                    <IconWrapper
+                      themeVariant={
+                        themeVariant === "primary" ? "secondary" : "primary"
+                      }
+                      initSize="xs"
+                      useBackground={false}
+                    >
+                      <LinkedinLogoIcon size={24} className={`${theme.icon}`} />
+                    </IconWrapper>
                     <span>-</span>LinkedIn
                   </Link>
                 </li>
                 <li>
                   <Link href="/" className={`${theme.textHover}`}>
-                    <GithubLogoIcon size={24} />
+                    <IconWrapper
+                      themeVariant={
+                        themeVariant === "primary" ? "secondary" : "primary"
+                      }
+                      initSize="xs"
+                      useBackground={false}
+                    >
+                      <GithubLogoIcon size={24} className={`${theme.icon}`} />
+                    </IconWrapper>
                     <span>-</span>GitHub
                   </Link>
                 </li>
                 <li>
                   <Link href="/" className={`${theme.textHover}`}>
-                    <GitlabLogoSimpleIcon size={24} />
+                    <IconWrapper
+                      themeVariant={
+                        themeVariant === "primary" ? "secondary" : "primary"
+                      }
+                      initSize="xs"
+                      useBackground={false}
+                    >
+                      <GitlabLogoSimpleIcon
+                        size={24}
+                        className={`${theme.icon}`}
+                      />
+                    </IconWrapper>
                     <span>-</span>GitLab
                   </Link>
                 </li>
