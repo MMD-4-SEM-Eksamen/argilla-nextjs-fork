@@ -158,6 +158,7 @@ export default function HeroBanner({
             {buttonLabel && (
               <LinkBtn
                 btnLink={buttonLink}
+                btnClass="border-transparent"
                 themeVariant={
                   themeVariant === "tertiary" || themeVariant === "quaternary"
                     ? "secondary"
@@ -179,6 +180,7 @@ export default function HeroBanner({
                     : themeVariant
               }
               strokeStyle="bottomRight"
+              imgStyle="border-r-8"
               {...foregroundImageConfig}
             />
           </div>
