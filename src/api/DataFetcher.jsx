@@ -1,24 +1,13 @@
-import { Suspense } from "react";
+"use client";
+import { useState, useEffect } from "react";
 import { createClient } from "@supabase/supabase-js";
-
-/* 
-// This component is a W.I.P, it will not be used for now, as no Supabase tables has been setup yet.
-
-// It will presumably be used in Iteration v2, but not for now (maybe?)
-
-// Comments in this Component will also need to be updated and changed,
-// - in case of changes. So for now, they will remain incomplete.
-
-*/
-
+import { useLanguage } from "@/context/lang-context/useLanguage";
 
 // Usage:
 /*
-"use client";
 import DataFetcher from "@/api/DataFetcher";
-import { useLanguage } from "@/context/lang-context/useLanguage";
 
-function MyComponent({myData}) {
+function MyComponent({ myData }) {
   return (
     <div>
       {myData.map((item) => (
@@ -32,11 +21,9 @@ function MyComponent({myData}) {
 }
 
 export default function PageComponent() {
-  const { language } = useLanguage();
-  
   return (
-    <DataFetcher table="content" language={language}>
-      {(data) => <MyComponent myData={data}/>}
+    <DataFetcher table="content">
+      {(data) => <MyComponent myData={data} />}
     </DataFetcher>
   );
 }
@@ -44,53 +31,50 @@ export default function PageComponent() {
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_ROLE_KEY
+  process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
 );
 
-// Async function to load data from Supabase with language support
-async function LoadData({ table, language, children }) {
-  let data = null;
-  let error = null;
+export default function DataFetcher({ table, children }) {
+  const { language } = useLanguage();
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
 
-  try {
-    // First try to fetch the requested language
-    const { data: result, error: supabaseError } = await supabase
-      .from(table)
-      .select("*")
-      .eq("language", language);
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const { data: result, error: supabaseError } = await supabase
+          .from(table)
+          .select("*")
+          .eq("language", language);
 
-    if (supabaseError) throw supabaseError;
+        if (supabaseError) throw supabaseError;
 
-    // If no results and not already default language, fallback to default
-    if (result.length === 0 && language !== "da") {
-      const { data: defaultResult, error: defaultError } = await supabase
-        .from(table)
-        .select("*")
-        .eq("language", "da");
-      
-      if (defaultError) throw defaultError;
-      data = defaultResult;
-    } else {
-      data = result;
+        console.log("Supabase result:", result);
+        console.log("Supabase error:", supabaseError);
+
+        // Fallback to Danish if no results for requested language
+        if (result.length === 0 && language !== "da") {
+          const { data: defaultResult, error: defaultError } = await supabase
+            .from(table)
+            .select("*")
+            .eq("language", "da");
+
+          if (defaultError) throw defaultError;
+          setData(defaultResult);
+        } else {
+          setData(result);
+        }
+      } catch (err) {
+        console.error(`Supabase error fetching from ${table}:`, err);
+        setError(err);
+      }
     }
-  } catch (err) {
-    console.error(`Supabase error fetching from ${table}:`, err);
-    error = err;
-  }
 
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  }
+    fetchData();
+  }, [table, language]);
+
+  if (error) return <div>Error: {error.message}</div>;
+  if (!data) return <div>Loading data...</div>;
 
   return <>{children(data)}</>;
-}
-
-export default function DataFetcher({ table, language = "da", children }) {
-  return (
-    <Suspense fallback={<div>Loading data...</div>}>
-      <LoadData table={table} language={language}>
-        {children}
-      </LoadData>
-    </Suspense>
-  );
 }

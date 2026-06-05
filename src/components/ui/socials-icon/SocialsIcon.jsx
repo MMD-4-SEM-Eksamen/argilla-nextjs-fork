@@ -38,17 +38,13 @@ export default function SocialsIcon({
 
   if (!IconComponent) return null;
 
+  const href =
+    type === "phone" ? `tel:${contactLink.replace(/[^+\d]/g, "")}` :
+    type === "email" ? `mailto:${contactLink}` :
+    contactLink;
+
   return (
-    <Link
-      href={contactLink}
-      className={`${themeSwatch[themeVariant]} md:cursor-pointer`}
-      {...props}
-    >
-      <IconWrapper
-        themeVariant={themeVariant}
-        initSize="xs"
-        useBackground={false}
-      >
+    <Link href={href} className={`${themeSwatch[themeVariant]} md:cursor-pointer`} {...props}>
         <IconComponent size={iconSize || 24} />
       </IconWrapper>
     </Link>

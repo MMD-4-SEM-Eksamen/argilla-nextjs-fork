@@ -1,6 +1,7 @@
-"use client";
+/*"use client";
 
 import { useEffect, useState } from "react";
+*/
 
 import FactsAndText from "@/components/blockElements/FactsAndText";
 import SectionElem from "@/components/section-elem/SectionElem";
@@ -11,8 +12,10 @@ import TextAndText from "@/components/blockElements/TextAndText";
 
 import DUMMY_DATA from "@/api/dummy-data/omos.json";
 import EMPLOYEES_DATA from "@/api/dummy-data/employees.json";
+import OmOsContent from "@/content/OmOsContent";
 
 export default function OmOs() {
+  /*
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
@@ -29,10 +32,11 @@ export default function OmOs() {
       mediaQuery.removeEventListener("change", updateViewportState);
     };
   }, []);
+  */
 
   return (
     <main>
-      {isDesktop ? (
+      {/* {isDesktop ? (
         <ImageWrapper
           imgSrc={DUMMY_DATA.hero.imageSrc}
           imgAlt={DUMMY_DATA.hero.altTxt}
@@ -49,6 +53,14 @@ export default function OmOs() {
           imgStyle="col-span-full"
         />
       )}
+      */}
+      <ImageWrapper
+          imgSrc={DUMMY_DATA.hero.imageSrc}
+          imgAlt={DUMMY_DATA.hero.altTxt}
+          imgWidth={400}
+          imgHeight={300}
+          imgStyle="col-span-full"
+        />
       <SectionElem
         centeredVariant={true}
         sectionHeading={DUMMY_DATA.introSection.heading}
@@ -78,34 +90,7 @@ export default function OmOs() {
           },
         }}
       >
-        <div className="grid w-full grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-x-40 gap-y-20">
-          {EMPLOYEES_DATA.slice(0, 3).map((employee) => (
-            <PersonCard
-              key={employee.id}
-              initSize="auto"
-              imgSrc={employee.image}
-              imgAlt={employee.altTxt}
-              imgWidth={1920}
-              imgHeight={1280}
-              imgStyle="object-cover"
-              cardTitle={employee.name}
-              cardText={employee.about}
-              tagChild={{ label: employee.jobTitle }}
-              contactIcon={employee.contact.map((contact) => ({
-                type: contact.icon,
-                url: contact.addr,
-              }))}
-              btnChild={{
-                type: "LinkBtn",
-                label: employee.btn.label,
-                props: {
-                  btnLink: `/teamet/${employee.slug}`,
-                  initSize: "medium",
-                },
-              }}
-            />
-          ))}
-        </div>
+        <OmOsContent />
       </SectionElem>
     </main>
   );

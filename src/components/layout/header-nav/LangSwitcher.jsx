@@ -1,20 +1,11 @@
 "use client";
-import { useState, useRef, useEffect, Suspense } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useState, useRef, useEffect } from "react";
 import { useLanguage } from "@/context/lang-context/useLanguage";
-import IconWrapper from "@/components/ui/icon-wrapper/IconWrapper";
 import { CaretDownIcon, PlanetIcon } from "@phosphor-icons/react";
 
-function LangSwitcherContent({ themeVariant = "primary" }) {
-  const { language, setLanguage } = useLanguage();
+export default function LangSwitcher({ themeVariant = "primary" }) {
+  const { language, setLanguage, langOptions } = useLanguage();
   const [isLangOpen, setIsLangOpen] = useState(false);
-  const router = useRouter();
-  const searchParams = useSearchParams();
-
-  // Should correspond to actual html lang="" attr
-  // Link: https://www.w3schools.com/tags/ref_language_codes.asp
-  const langOptions = ["da", "en", "sv"];
-
   const langDropdown = useRef(null);
 
   const themeSwatch = {
@@ -35,20 +26,6 @@ function LangSwitcherContent({ themeVariant = "primary" }) {
   };
 
   const theme = themeSwatch[themeVariant] || themeSwatch.primary;
-
-  const handleLanguageChange = (lang) => {
-    setLanguage(lang);
-
-    // Only add language param if it's not the default
-    if (lang !== "da") {
-      const params = new URLSearchParams(searchParams);
-      params.set("language", lang);
-      router.push(`?${params.toString()}`);
-    } else {
-      // Remove language param if switching back to default
-      router.push(window.location.pathname);
-    }
-  };
 
   // If any clicks are happening outside the dropdown container, will close it.
   // Similar to how dropdown behaves in FilterElem.jsx
@@ -106,7 +83,8 @@ function LangSwitcherContent({ themeVariant = "primary" }) {
             <li
               key={lang}
               onClick={() => {
-                handleLanguageChange(lang);
+                setLanguage(lang);
+                setIsLangOpen(false);
               }}
               className={`block w-full px-3 py-2 text-center text-lg uppercase md:cursor-pointer md:text-xl ${theme.textAlt}`}
             >
@@ -116,13 +94,5 @@ function LangSwitcherContent({ themeVariant = "primary" }) {
         </ul>
       )}
     </div>
-  );
-}
-
-export default function LangSwitcher(props) {
-  return (
-    <Suspense>
-      <LangSwitcherContent {...props} />
-    </Suspense>
   );
 }
