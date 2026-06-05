@@ -99,7 +99,7 @@ export default function ImageCard({
   const theme = themeSwatch[themeVariant] || themeSwatch.primary;
   return (
     <article
-      className={`grid auto-rows-min items-start justify-items-center gap-y-6 rounded-xl pb-7 ${size[initSize]} ${theme.bg} ${cardStyle}`}
+      className={`flex h-full flex-col rounded-xl pb-7 ${size[initSize]} ${theme.bg} ${cardStyle}`}
     >
       <ImageWrapper
         imgSrc={imgSrc}
@@ -108,7 +108,7 @@ export default function ImageCard({
         imgHeight={imgHeight}
         imgStyle={`rounded-t-xl ${imgStyle} ${imageSize[imgSize]}`}
       />
-      <div className="px-mobile-inline grid justify-items-center gap-y-6">
+      <div className="px-mobile-inline grid flex-1 justify-items-center gap-y-6">
         <div className="grid gap-y-4">
           <h3 className={`text-2xl ${theme.heading}`}>{cardTitle}</h3>
           {tagChild && tagChild.length > 0 ? (
@@ -131,16 +131,20 @@ export default function ImageCard({
             ) : null}
           </div>
         </div>
-        {btnChild && btnChild.type === "ActionBtn" && (
-          <ActionBtn themeVariant={themeVariant} {...btnChild.props}>
-            {btnChild.label}
-          </ActionBtn>
-        )}
-        {btnChild && btnChild.type === "LinkBtn" && (
-          <LinkBtn themeVariant={themeVariant} {...btnChild.props}>
-            {btnChild.label}
-          </LinkBtn>
-        )}
+        {btnChild ? (
+          <div className="mt-auto flex w-full justify-center">
+            {btnChild.type === "ActionBtn" && (
+              <ActionBtn themeVariant={themeVariant} {...btnChild.props}>
+                {btnChild.label}
+              </ActionBtn>
+            )}
+            {btnChild.type === "LinkBtn" && (
+              <LinkBtn themeVariant={themeVariant} {...btnChild.props}>
+                {btnChild.label}
+              </LinkBtn>
+            )}
+          </div>
+        ) : null}
       </div>
     </article>
   );
