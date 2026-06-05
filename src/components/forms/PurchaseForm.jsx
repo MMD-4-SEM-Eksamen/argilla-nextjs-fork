@@ -47,12 +47,16 @@ function validateForm(values) {
   return errors;
 }
 
-export default function PurchaseForm() {
+export default function PurchaseForm({ policyChecksAccepted = false }) {
   const [values, setValues] = useState(INITIAL_VALUES);
   const [errors, setErrors] = useState({});
   const [submitState, setSubmitState] = useState("idle");
 
   const hasErrors = useMemo(() => Object.keys(errors).length > 0, [errors]);
+  const shouldShowPolicyError =
+    submitState === "error" && !policyChecksAccepted;
+  const shouldShowSubmitAlert =
+    submitState === "error" && (hasErrors || shouldShowPolicyError);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -79,6 +83,12 @@ export default function PurchaseForm() {
 
     if (Object.keys(nextErrors).length > 0) {
       setErrors(nextErrors);
+      setSubmitState("error");
+      return;
+    }
+
+    if (!policyChecksAccepted) {
+      setErrors({});
       setSubmitState("error");
       return;
     }
@@ -255,14 +265,15 @@ export default function PurchaseForm() {
         </div>
       </div>
 
-      {submitState === "error" && hasErrors && (
+      {shouldShowSubmitAlert && (
         <div
           role="alert"
           aria-live="polite"
           className="text-light mt-4 rounded-xl bg-red-500 px-4 py-3"
         >
-          Der er fejl i formularen. Gennemgå felterne markeret med fejl og prøv
-          igen.
+          {shouldShowPolicyError
+            ? "Du skal markere alle bekræftelser i afsnittet Politikker & dokumentation, før du kan sende forespørgslen."
+            : "Der er fejl i formularen. Gennemgå felterne markeret med fejl og prøv igen."}
         </div>
       )}
 
@@ -270,7 +281,7 @@ export default function PurchaseForm() {
         <div
           role="status"
           aria-live="polite"
-          className="bg-secondary text-primary mt-4 rounded-xl px-4 py-3"
+          className="bg-dark text-secondary mt-4 rounded-xl px-4 py-3"
         >
           Tak for din forespørgsel. Vi vender tilbage hurtigst muligt.
         </div>

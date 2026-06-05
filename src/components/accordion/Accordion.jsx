@@ -14,6 +14,12 @@ import { CaretDownIcon } from "@phosphor-icons/react";
 import IconWrapper from "../ui/icon-wrapper/IconWrapper";
 import Pagination from "../ui/pagination/Pagination";
 
+const DEFAULT_CHECKBOX_LABELS = [
+  "Jeg har gennemgået de relevante vilkår og politikker.",
+  "Jeg forstår, hvordan mine data behandles og beskyttes.",
+  "Jeg accepterer de rammer og retningslinjer, der gælder for brugen af platformen.",
+];
+
 // ─── Slider ───────────────────────────────────────────────────────────────────
 
 function AccordionSlider({ slides }) {
@@ -77,40 +83,36 @@ function AccordionRow({ item }) {
 
 // ─── Checkboxes ─────────────────────────────────────────────────────────────────────
 
-function AccordionCheckbox() {
+function AccordionCheckbox({
+  checkboxStates,
+  onCheckboxChange,
+  checkboxLabels,
+}) {
+  const labels = checkboxLabels ?? DEFAULT_CHECKBOX_LABELS;
+
   return (
     <div>
-      <div className="mt-6 flex items-center gap-3 px-5">
-        <input
-          type="checkbox"
-          id="checkbox"
-          className="border-light accent-dark size-5 cursor-pointer"
-        />
-        <label htmlFor="checkbox" className="text-secondary font-sans">
-          - Jeg har gennemgået de relevante vilkår og politikker.
-        </label>
-      </div>
-      <div className="mt-6 flex items-center gap-3 px-5">
-        <input
-          type="checkbox"
-          id="checkbox"
-          className="border-light accent-dark size-5 cursor-pointer"
-        />
-        <label htmlFor="checkbox" className="text-secondary font-sans">
-          - Jeg forstår, hvordan mine data behandles og beskyttes.
-        </label>
-      </div>
-      <div className="mt-6 flex items-center gap-3 px-5">
-        <input
-          type="checkbox"
-          id="checkbox"
-          className="border-light accent-dark size-5 cursor-pointer"
-        />
-        <label htmlFor="checkbox" className="text-secondary font-sans">
-          - Jeg accepterer de rammer og retningslinjer, der gælder for brugen af
-          platformen.
-        </label>
-      </div>
+      {labels.map((label, index) => {
+        const checkboxId = `accordion-policy-checkbox-${index}`;
+        const isChecked = checkboxStates?.[index] ?? false;
+
+        return (
+          <div key={checkboxId} className="mt-6 flex items-center gap-3 px-5">
+            <input
+              type="checkbox"
+              id={checkboxId}
+              checked={isChecked}
+              onChange={(event) =>
+                onCheckboxChange?.(index, event.target.checked)
+              }
+              className="border-light accent-dark size-5 cursor-pointer"
+            />
+            <label htmlFor={checkboxId} className="text-secondary font-sans">
+              - {label}
+            </label>
+          </div>
+        );
+      })}
     </div>
   );
 }
@@ -122,6 +124,9 @@ export default function Accordion({
   hasCheckboxes = false,
   title = "Ofte stillede spørgsmål",
   description = "lorem ipsum",
+  checkboxStates,
+  onCheckboxChange,
+  checkboxLabels,
 }) {
   return (
     <div className="bg-primary mx-auto w-full max-w-360 overflow-hidden px-6 py-10">
@@ -131,7 +136,13 @@ export default function Accordion({
         {items.map((item) => (
           <AccordionRow key={item.id} item={item} />
         ))}
-        {hasCheckboxes && <AccordionCheckbox />}
+        {hasCheckboxes && (
+          <AccordionCheckbox
+            checkboxStates={checkboxStates}
+            onCheckboxChange={onCheckboxChange}
+            checkboxLabels={checkboxLabels}
+          />
+        )}
       </div>
     </div>
   );
