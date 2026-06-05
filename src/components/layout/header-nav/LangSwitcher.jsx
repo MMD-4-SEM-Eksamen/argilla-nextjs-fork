@@ -1,6 +1,7 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import { useLanguage } from "@/context/lang-context/useLanguage";
+import IconWrapper from "@/components/ui/icon-wrapper/IconWrapper";
 import { CaretDownIcon, PlanetIcon } from "@phosphor-icons/react";
 
 export default function LangSwitcher({ themeVariant = "primary" }) {
