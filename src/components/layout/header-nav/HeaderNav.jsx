@@ -1,6 +1,7 @@
 "use client";
 // NextJS Components
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 // PhosphorIcons Imports
 import { ListIcon, XIcon } from "@phosphor-icons/react";
@@ -13,6 +14,7 @@ import ShoppingCartButton from "@/components/ui/shoppingCartButton/ShoppingCartB
 
 export default function HeaderNav({ themeVariant = "primary" }) {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const pathname = usePathname();
 
   const themeSwatch = {
     primary: {
@@ -33,6 +35,16 @@ export default function HeaderNav({ themeVariant = "primary" }) {
 
   const theme = themeSwatch[themeVariant] || themeSwatch.primary;
 
+  const isActiveLink = (href) => {
+    if (href === "/") return pathname === "/";
+    return pathname === href || pathname.startsWith(`${href}/`);
+  };
+
+  const navLinkClass = (href) =>
+    `relative inline-flex items-center pb-1 transition-colors after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-200 ${
+      isActiveLink(href) ? "after:scale-x-100" : "hover:after:scale-x-100"
+    }`;
+
   return (
     <header>
       <div
@@ -48,19 +60,29 @@ export default function HeaderNav({ themeVariant = "primary" }) {
             className={`col-start-2 flex gap-8 px-4 max-lg:hidden [&>li>a]:cursor-pointer [&>li>a]:font-sans [&>li>a]:text-lg`}
           >
             <li className={`${theme.text}`}>
-              <Link href="/">Hjem</Link>
+              <Link href="/" className={navLinkClass("/")}>
+                Hjem
+              </Link>
             </li>
             <li className={`${theme.text}`}>
-              <Link href="/ydelser">Ydelser</Link>
+              <Link href="/ydelser" className={navLinkClass("/ydelser")}>
+                Ydelser
+              </Link>
             </li>
             <li className={`${theme.text}`}>
-              <Link href="/omos">Om Os</Link>
+              <Link href="/omos" className={navLinkClass("/omos")}>
+                Om Os
+              </Link>
             </li>
             <li className={`${theme.text}`}>
-              <Link href="/cases">Cases</Link>
+              <Link href="/cases" className={navLinkClass("/cases")}>
+                Cases
+              </Link>
             </li>
             <li className={`${theme.text}`}>
-              <Link href="/kontakt">Kontakt</Link>
+              <Link href="/kontakt" className={navLinkClass("/kontakt")}>
+                Kontakt
+              </Link>
             </li>
           </ul>
           <div className="col-start-3 flex w-full items-center justify-end gap-2.5 justify-self-end pl-2.5 max-lg:hidden">
@@ -106,19 +128,29 @@ export default function HeaderNav({ themeVariant = "primary" }) {
               className={`grid w-full place-content-center gap-6 text-center [&>li>a]:text-lg`}
             >
               <li className={`${theme.text}`}>
-                <Link href="/">Hjem</Link>
+                <Link href="/" className={navLinkClass("/")}>
+                  Hjem
+                </Link>
               </li>
               <li className={`${theme.text}`}>
-                <Link href="/ydelser">Ydelser</Link>
+                <Link href="/ydelser" className={navLinkClass("/ydelser")}>
+                  Ydelser
+                </Link>
               </li>
               <li className={`${theme.text}`}>
-                <Link href="/omos">Om Os</Link>
+                <Link href="/omos" className={navLinkClass("/omos")}>
+                  Om Os
+                </Link>
               </li>
               <li className={`${theme.text}`}>
-                <Link href="/cases">Cases</Link>
+                <Link href="/cases" className={navLinkClass("/cases")}>
+                  Cases
+                </Link>
               </li>
               <li className={`${theme.text}`}>
-                <Link href="/kontakt">Kontakt</Link>
+                <Link href="/kontakt" className={navLinkClass("/kontakt")}>
+                  Kontakt
+                </Link>
               </li>
             </ul>
             <div className="relative inline-block">
