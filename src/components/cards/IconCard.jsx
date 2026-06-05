@@ -53,7 +53,7 @@ export default function IconCard({
   tagChild,
   filterKey = "category",
   baseUrl = "/",
-  btnChild
+  btnChild,
 }) {
   const size = {
     auto: "size-auto",
@@ -77,39 +77,54 @@ export default function IconCard({
   const theme = themeSwatch[themeVariant] || themeSwatch.primary;
   return (
     <article
-      className={`grid auto-rows-min gap-y-6 rounded-xl px-mobile-inline py-7 justify-items-center items-start  ${size[initSize]} ${theme.bg} ${cardStyle}`}
+      className={`px-mobile-inline flex h-full flex-col rounded-xl py-7 ${size[initSize]} ${theme.bg} ${cardStyle}`}
     >
-        {iconChild ? <IconWrapper themeVariant={themeVariant} elemStyle="justify-self-start">{iconChild}</IconWrapper> : null}
-      <div className="grid gap-y-4">
-        <h3 className={`text-2xl ${theme.heading}`}>{cardTitle}</h3>
-        {tagChild && tagChild.length > 0 ? (
-          <div className="flex flex-wrap gap-3">
-            {tagChild.map((tag) => (
-              <TagElem
-                key={tag.label}
-                label={tag.label}
-                filterKey={tag.filterKey || filterKey}
-                baseUrl={baseUrl}
-                themeVariant={themeVariant}
-              />
-            ))}
-          </div>
+      <div className="mb-6 grid flex-1 gap-y-6">
+        {iconChild ? (
+          <IconWrapper
+            themeVariant={themeVariant}
+            elemStyle="justify-self-start"
+          >
+            {iconChild}
+          </IconWrapper>
         ) : null}
-        <div className={`${cardCitation ? "grid gap-y-4" : ""}`}>
-          <p className={`${theme.text}`}>{cardText}</p>
-          {cardCitation ? <p className={`${theme.text} place-self-end`}>{cardCitation}</p> : null}
+        <div className="grid gap-y-4">
+          <h3 className={`text-2xl ${theme.heading}`}>{cardTitle}</h3>
+          {tagChild && tagChild.length > 0 ? (
+            <div className="flex flex-wrap gap-3">
+              {tagChild.map((tag) => (
+                <TagElem
+                  key={tag.label}
+                  label={tag.label}
+                  filterKey={tag.filterKey || filterKey}
+                  baseUrl={baseUrl}
+                  themeVariant={themeVariant}
+                />
+              ))}
+            </div>
+          ) : null}
+          <div className={`${cardCitation ? "grid gap-y-4" : ""}`}>
+            <p className={`${theme.text}`}>{cardText}</p>
+            {cardCitation ? (
+              <p className={`${theme.text} place-self-end`}>{cardCitation}</p>
+            ) : null}
+          </div>
         </div>
       </div>
-      {btnChild && btnChild.type === "ActionBtn" && (
-        <ActionBtn themeVariant={themeVariant} {...btnChild.props}>
-          {btnChild.label}
-        </ActionBtn>
-      )}
-      {btnChild && btnChild.type === "LinkBtn" && (
-        <LinkBtn themeVariant={themeVariant} {...btnChild.props}>
-          {btnChild.label}
-        </LinkBtn>
-      )}
+      {btnChild ? (
+        <div className="mt-auto flex w-full justify-center">
+          {btnChild.type === "ActionBtn" && (
+            <ActionBtn themeVariant={themeVariant} {...btnChild.props}>
+              {btnChild.label}
+            </ActionBtn>
+          )}
+          {btnChild.type === "LinkBtn" && (
+            <LinkBtn themeVariant={themeVariant} {...btnChild.props}>
+              {btnChild.label}
+            </LinkBtn>
+          )}
+        </div>
+      ) : null}
     </article>
   );
 }
