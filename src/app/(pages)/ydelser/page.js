@@ -11,7 +11,7 @@ export default function Ydelser() {
     <main>
       <SectionElem
         sectionHeading="Vores ydelser"
-        sectionBodyText="Argilla leveres på den måde der passer bedst til jeres organisation. Uanset om I ønsker fuld kontrol over egen infrastruktur, en driftet cloud-løsning eller noget midt imellem, sp vi har en model der passer."
+        sectionBodyText="Argilla leveres på den måde der passer bedst til jeres organisation. Uanset om I ønsker fuld kontrol over egen infrastruktur, en driftet cloud-løsning eller noget midt imellem, så vi har en model der passer."
         centeredVariant={true}
         elemStyle="mt-20"
       />
