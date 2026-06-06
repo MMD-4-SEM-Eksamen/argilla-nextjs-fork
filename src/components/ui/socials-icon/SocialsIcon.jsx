@@ -48,12 +48,12 @@ export default function SocialsIcon({
   return (
     <Link
       href={href}
-      className={`${themeSwatch[themeVariant]} md:cursor-pointer`}
       {...props}
     >
       <IconWrapper
         themeVariant={themeVariant}
         initSize="xs"
+        elemStyle={`${themeSwatch[themeVariant]} md:cursor-pointer`}
         useBackground={false}
       >
         <IconComponent size={iconSize || 24} />
