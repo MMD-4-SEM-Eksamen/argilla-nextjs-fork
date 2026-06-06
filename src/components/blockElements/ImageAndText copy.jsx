@@ -14,19 +14,36 @@
 //showContactInfo - Boolean to determine if contact information should be displayed.
 //contactPhone - Phone number to display in contact information.
 //contactEmail - Email address to display in contact information.
-//socialLinks - Determines the SoMe / Contact Icons and URL's of the SocialsIcon.jsx comp
+//socialLinks - Array of social link objects, each containing href, label, and Icon properties.
 //className - Additional classes for the main container.
 //imagePriority - Boolean to set the priority attribute for the Next.js Image component.
 */
 
+import Link from "next/link";
 import IconWrapper from "../ui/icon-wrapper/IconWrapper";
 import ImageWrapper from "../ui/image-wrapper/ImageWrapper";
 import {
   EnvelopeSimpleIcon,
-  PhoneIcon
+  GithubLogoIcon,
+  LinkedinLogoIcon,
+  GitlabLogoSimpleIcon,
+  PhoneIcon,
 } from "@phosphor-icons/react";
 import LinkBtn from "../ui/buttons/LinkBtn";
-import SocialsIcon from "../ui/socials-icon/SocialsIcon";
+
+const DEFAULT_SOCIAL_LINKS = [
+  {
+    href: "https://www.linkedin.com",
+    label: "LinkedIn",
+    Icon: LinkedinLogoIcon,
+  },
+  { href: "https://github.com", label: "GitHub", Icon: GithubLogoIcon },
+  {
+    href: "https://gitlab.com",
+    label: "GitLab",
+    Icon: GitlabLogoSimpleIcon,
+  },
+];
 
 export default function ImageAndText({
   imageSrc,
@@ -43,7 +60,7 @@ export default function ImageAndText({
   showContactInfo = false,
   contactPhone = "+45 420691337",
   contactEmail = "lorem@ipsum.com",
-  socialLinks,
+  socialLinks = DEFAULT_SOCIAL_LINKS,
   className = "",
   imagePriority = false,
 }) {
@@ -74,34 +91,40 @@ export default function ImageAndText({
         className={`${reverseOrder ? "lg:order-1 lg:col-start-1" : "lg:order-2"} space-y-4 sm:space-y-5 lg:max-w-160 lg:pl-4`}
       >
         {showContactInfo && (
-          <div className="text-primary grid gap-x-5 gap-y-2">
-              {socialLinks && socialLinks.length > 0 ? (
-                <div className="flex flex-wrap items-center gap-2">
-                  {socialLinks.map((contact) => (
-                    <SocialsIcon
-                      key={contact.url}
-                      type={contact.type}
-                      contactLink={contact.url}
-                    />
-                  ))}
-                </div>
-              ) : null}
+          <div className="text-primary flex flex-wrap items-center gap-x-5 gap-y-2">
+            <div className="flex items-center gap-2 text-sm">
+              {socialLinks?.map(({ href, label, Icon }) => (
+                <Link
+                  key={label}
+                  href={href}
+                  aria-label={label}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-dark inline-flex items-center justify-center rounded-full transition"
+                >
+                  <IconWrapper initSize="xs" useBackground={false}>
+                    <Icon size={18} weight="regular" />
+                  </IconWrapper>
+                </Link>
+              ))}
+            </div>
+
             <div className="text-primary/90 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
               <a
                 href={`tel:${contactPhone.replace(/[^+\d]/g, "")}`}
-                className="hover:text-dark [&:hover_svg]:fill-dark inline-flex items-center gap-2 transition"
+                className="hover:text-dark inline-flex items-center gap-2 transition"
               >
                 <IconWrapper initSize="xs" useBackground={false}>
-                  <PhoneIcon size={24} />
+                  <PhoneIcon size={16} />
                 </IconWrapper>
                 <span>{contactPhone}</span>
               </a>
               <a
                 href={`mailto:${contactEmail}`}
-                className="hover:text-dark [&:hover_svg]:fill-dark inline-flex items-center gap-2 transition"
+                className="hover:text-dark inline-flex items-center gap-2 transition"
               >
                 <IconWrapper initSize="xs" useBackground={false}>
-                  <EnvelopeSimpleIcon size={24} />
+                  <EnvelopeSimpleIcon size={16} />
                 </IconWrapper>
                 <span>{contactEmail}</span>
               </a>
