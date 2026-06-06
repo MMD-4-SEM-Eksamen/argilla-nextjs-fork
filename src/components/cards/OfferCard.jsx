@@ -82,7 +82,7 @@ export default function OfferCard({
   const theme = themeSwatch[themeVariant] || themeSwatch.primary;
   return (
     <article
-      className={`grid auto-rows-min items-start justify-items-center gap-y-6 rounded-xl py-7 ${size[initSize]} ${theme.bg} ${cardStyle}`}
+      className={`max-w-card grid auto-rows-min items-start justify-items-center gap-y-6 rounded-xl py-7 ${size[initSize]} ${theme.bg} ${cardStyle}`}
     >
       <div className="px-mobile-inline grid items-start justify-items-center gap-6">
         {iconChild ? (
