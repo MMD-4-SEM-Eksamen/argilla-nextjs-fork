@@ -59,9 +59,9 @@ export default function KoebClient({ selectedType }) {
             bulletNumber="01"
             bulletClass="mt-10"
           >
-            Udfyld formularen med en kort beskrivelse af udfordringen, antal
-            brugere og eventuelle integrationsønsker. Vi svarer typisk inden for
-            2 arbejdsdage med et forslag til opstartsmøde.
+            Udfyld formularen med de påkrævede oplysninger og send forespørgslen
+            afsted. Vi svarer typisk inden for 2 arbejdsdage med et forslag til
+            opstartsmøde.
           </BulletpointTitle>
           <BulletpointTitle
             title="Opstartsmøde og tilbud"

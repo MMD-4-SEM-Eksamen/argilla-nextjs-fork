@@ -9,7 +9,7 @@ import Link from "next/link";
 
 export default function TagElem({
   label,
-  linkVariant = true,
+  linkVariant = false,
   themeVariant = "primary",
   filterKey = "category",
   baseUrl = "/",
@@ -35,7 +35,7 @@ export default function TagElem({
     </Link>
   ) : (
     <div
-      className={`${theme} hover:border-b-dark inline-flex h-fit w-fit place-items-center rounded-lg px-2 py-1 font-sans text-sm font-bold transition-colors duration-150 ease-in-out hover:border-b-3 md:cursor-pointer`}
+      className={`${theme} inline-flex h-fit w-fit place-items-center rounded-lg px-2 py-1 font-sans text-sm font-bold`}
     >
       <span className={spanText}>{label}</span>
     </div>

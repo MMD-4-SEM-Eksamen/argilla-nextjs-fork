@@ -42,7 +42,7 @@
 import IconWrapper from "../ui/icon-wrapper/IconWrapper";
 import ActionBtn from "../ui/buttons/ActionBtn";
 import LinkBtn from "../ui/buttons/LinkBtn";
-import { CaretRightIcon } from "@phosphor-icons/react/dist/ssr";
+import { CircleIcon } from "@phosphor-icons/react/dist/ssr";
 
 export default function OfferCard({
   themeVariant = "primary",
@@ -68,14 +68,14 @@ export default function OfferCard({
       bgAlt: "bg-secondary",
       heading: "text-secondary",
       text: "text-light",
-      icon: "fill-light",
+      icon: "*:fill-light",
     },
     secondary: {
       bg: "bg-secondary",
       bgAlt: "bg-primary",
       heading: "text-primary",
       text: "text-dark",
-      icon: "fill-dark",
+      icon: "*:fill-dark",
     },
   };
 
@@ -122,10 +122,10 @@ export default function OfferCard({
         <h3 className={`text-xl ${theme.heading}`}>{cardFeaturesTitle}</h3>
         {bulletChild.map((bullet) => (
           <div
-            className="flex gap-4 [&>svg]:mt-1 [&>svg]:shrink-0"
+            className={`flex gap-4 [&>svg]:mt-1 [&>svg]:shrink-0 ${theme.icon}`}
             key={bullet.label}
           >
-            <CaretRightIcon size={16} fill={theme.icon} />
+            <CircleIcon size={16} weight="fill" />
             <span className={`${theme.text}`}>{bullet.label}</span>
           </div>
         ))}

@@ -34,9 +34,9 @@ export default function FooterElem({ themeVariant = "primary" }) {
   return (
     <footer>
       <div
-        className={`${theme.bg} max-w-breakout ${theme.text} px-mobile-inline grid`}
+        className={`${theme.bg} max-w-breakout ${theme.text} px-mobile-inline grid grid-cols-max *:col-start-2`}
       >
-        <div className="max-w-content-max px-mobile-inline grid w-full gap-y-24 place-self-center py-11 md:px-11">
+        <div className="grid md:w-full gap-y-24 max-md:justify-center place-self-center py-11 md:px-11">
           <div className="grid gap-8 md:flex md:flex-wrap md:justify-between md:gap-12 [&_a,&_p]:text-lg [&_h2]:mb-4 [&_h2]:text-xl [&_h2]:font-bold [&_li:not(:last-child)]:mb-2">
             <LogoFull
               logoLink="/"
@@ -127,7 +127,7 @@ export default function FooterElem({ themeVariant = "primary" }) {
                 </li>
               </ul>
             </div>
-            <Newsletter />
+            <Newsletter elemStyle="min-w-[320px]"/>
           </div>
           <p>© 2026 Argilla - Alle rettigheder forbeholdes | CVR: DK27374646</p>
         </div>
