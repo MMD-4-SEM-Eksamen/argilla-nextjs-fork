@@ -62,10 +62,13 @@
   /* Sizing */
   --max-w-desktop: 1440px;
   --max-w-breakout: 1920px;
+  --max-w-card: 400px;
   --max-w-text: 75ch;
   --mobile-pad-inline: 1.25rem;
 
-  --grid-col: 1fr minmax(0, calc((calc(var(--mobile-pad-inline)) * 2) + var(--max-w-desktop))) 1fr;
+  --grid-col: 1fr
+    minmax(0, calc((calc(var(--mobile-pad-inline)) * 2) + var(--max-w-desktop)))
+    1fr;
 
   --grid-col-break: 1fr minmax(0, var(--max-w-breakout)) 1fr;
 
@@ -93,10 +96,15 @@
   grid-template-columns: var(--grid-col-break);
 }
 
+@utility max-w-card {
+  max-width: var(--max-w-card);
+}
+
 @theme inline {
   /* Sizing */
   --spacing-text-max: var(--max-w-text);
   --spacing-content-max: var(--max-w-desktop);
+  --spacing-card-max: var(--max-w-card);
   --spacing-breakout: var(--max-w-breakout);
   --spacing-mobile-inline: var(--mobile-pad-inline);
 
@@ -152,13 +160,13 @@
   .text-lg {
     @apply font-sans font-semibold;
   }
-   .text-base {
+  .text-base {
     @apply font-sans font-normal;
   }
-   .text-sm {
+  .text-sm {
     @apply font-sans font-normal;
   }
-   .text-xs {
+  .text-xs {
     @apply font-sans font-normal;
   }
 
@@ -264,8 +272,8 @@
 */
 
   main {
-    @apply  grid-cols-max auto-rows-min max-w-breakout grid min-h-full gap-y-27 md:gap-y-32 *:col-start-2 *:col-end-auto *:last:mb-27 md:*:last:mb-32 md:min-h-dvh;
-    
+    @apply grid-cols-max max-w-breakout grid min-h-full auto-rows-min gap-y-27 *:col-start-2 *:col-end-auto *:last:mb-27 md:min-h-dvh md:gap-y-32 md:*:last:mb-32;
+
     /* Overriding all non-breakout elements padding-inline with the mobile pad.  
       - (grid-cols-max) has been updated to include the mobile-pad-inline on both ends.
       */

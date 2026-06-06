@@ -111,7 +111,7 @@ export default function PersonCard({
 
   return (
     <article
-      className={`px-mobile-inline grid auto-rows-min items-start justify-items-center gap-y-8 py-7 ${size[initSize]} ${theme.bg} ${cardStyle}`}
+      className={`max-w-card px-mobile-inline grid auto-rows-min items-start justify-items-center gap-y-8 py-7 ${size[initSize]} ${theme.bg} ${cardStyle}`}
     >
       <ImageWrapper
         imgSrc={imgSrc}

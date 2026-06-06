@@ -77,7 +77,7 @@ export default function IconCard({
   const theme = themeSwatch[themeVariant] || themeSwatch.primary;
   return (
     <article
-      className={`px-mobile-inline flex h-full flex-col rounded-xl py-7 ${size[initSize]} ${theme.bg} ${cardStyle}`}
+      className={`max-w-card px-mobile-inline flex h-full flex-col rounded-xl py-7 ${size[initSize]} ${theme.bg} ${cardStyle}`}
     >
       <div className="mb-6 grid flex-1 gap-y-6">
         {iconChild ? (

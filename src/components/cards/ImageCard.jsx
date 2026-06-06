@@ -99,7 +99,7 @@ export default function ImageCard({
   const theme = themeSwatch[themeVariant] || themeSwatch.primary;
   return (
     <article
-      className={`flex h-full flex-col rounded-xl pb-7 ${size[initSize]} ${theme.bg} ${cardStyle}`}
+      className={`max-w-card flex h-full flex-col rounded-xl pb-7 ${size[initSize]} ${theme.bg} ${cardStyle}`}
     >
       <ImageWrapper
         imgSrc={imgSrc}
